@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VANTAGE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet: reset, layout, components and states (plain CSS) -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- All interactive behaviour (menu, simulator, modal, scroll effects) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a href="#main-content" class="page-link">
+    Skip to main content
+  </a>
+
+  <!-- Top Announcement Bar -->
+  <aside aria-label="Announcement" class="announcement-bar">
+    <span class="announcement-row">CONFIDENTIAL</span>
+    <span class="hide-on-mobile">Investor Brief • Dennis Ndubueze • October 2026</span>
+    <a href="#investors" class="announcement-link">View the Opportunity &rarr;</a>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="header-header glass-panel">
+    <div class="page-container-wide">
+      <div class="header-row">
+        <div class="header-row-2">
+          <div class="row-centered">
+            <span class="header-text glow-text">VANTAGE</span>
+            <span class="header-label">ADMIN MODE</span>
+          </div>
+        </div>
+
+        <nav class="header-nav" aria-label="Primary">
+          <a href="#vision" class="nav-link desktop-nav-link">The Vision</a>
+          <a href="#simulation" class="nav-link desktop-nav-link">Interactive Wave</a>
+          <a href="#problem" class="nav-link desktop-nav-link">The Problem</a>
+          <a href="#pillars" class="nav-link desktop-nav-link">Core Pillars</a>
+          <a href="#architecture" class="nav-link desktop-nav-link">Architecture</a>
+          <a href="#roadmap" class="nav-link desktop-nav-link">Roadmap</a>
+          <a href="#investors" class="nav-link desktop-nav-link">Investors</a>
+        </nav>
+
+        <div class="header-row-3">
+          <a href="https://vantage-tawny-rho.vercel.app/" target="_blank" rel="noopener noreferrer"
+             class="header-link">
+            <span class="live-dot"></span>
+            Live POC Demo
+          </a>
+          <a href="#simulation"
+             class="header-link-2">
+            <span class="header-text-2">Launch</span>
+            <span class="hide-on-mobile">Launch Simulator</span>
+          </a>
+          <button id="mobileMenuBtn" type="button" class="header-button glass-panel" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">
+            <span class="hamburger-line hamburger-bar"></span>
+            <span class="hamburger-line hamburger-bar"></span>
+            <span class="hamburger-line hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu header-box" aria-hidden="true">
+        <nav class="header-nav-2" aria-label="Mobile">
+          <a href="#vision" class="nav-link mobile-nav-link">The Vision</a>
+          <a href="#simulation" class="nav-link mobile-nav-link">Interactive Wave</a>
+          <a href="#problem" class="nav-link mobile-nav-link">The Problem</a>
+          <a href="#pillars" class="nav-link mobile-nav-link">Core Pillars</a>
+          <a href="#architecture" class="nav-link mobile-nav-link">Architecture</a>
+          <a href="#roadmap" class="nav-link mobile-nav-link">Roadmap</a>
+          <a href="#investors" class="nav-link header-link-3">Investors</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="vision">
+    <div class="hero-intro">
+
+      <!-- JARVIS Stark Quote Pill -->
+      <div class="hero-row glass-panel">
+        <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="hero-text">The "JARVIS for Strategy" idea</span>
+        <span class="hero-text-2">"You know how Tony Stark talks to JARVIS and a simulation appears?"</span>
+        <span class="hero-label">— Dennis Ndubueze</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-title">
+        Visualise the <br class="hide-on-mobile" />
+        <span class="hero-text-3 glow-text">
+          Momentum of Strategy
+        </span>
+      </h1>
+
+      <p class="hero-text-4">
+        You describe your plan in plain language. <strong class="hero-strong">VANTAGE</strong> builds it, interrogates it with AI, and renders living, branching wave simulations of every possible future in real time.
+      </p>
+
+      <!-- CTA Action Row -->
+      <div class="hero-column">
+        <button onclick="scrollToDemo()" type="button"
+           class="hero-button">
+          <svg class="hero-icon-2" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Explore Living Wave Demo
+        </button>
+
+        <a href="#boardroom"
+           class="hero-link glass-panel">
+          <span>The Boardroom Scenario</span>
+          <svg class="hero-icon-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Core Trio Stats / Pillars Highlight -->
+      <div class="hero-grid">
+        <div class="glass-panel hero-card">
+          <div class="hero-box">01 • VISUALISE</div>
+          <h2 class="hero-card-title">Living Wave Timeline</h2>
+          <p class="body-small-muted">Smooth Bezier waves communicating true momentum, replacing static Gantt chart clutter.</p>
+        </div>
+        <div class="glass-panel hero-card-2">
+          <div class="hero-box-2">02 • ANALYSE</div>
+          <h2 class="hero-card-title">AI Co-Pilot Interrogation</h2>
+          <p class="body-small-muted">Proactively flags timeline overruns and resource conflicts via PM frameworks & RICE scoring.</p>
+        </div>
+        <div class="glass-panel hero-card-3">
+          <div class="hero-box-3">03 • SIMULATE</div>
+          <h2 class="hero-card-title">Scenario Branching Engine</h2>
+          <p class="body-small-muted">Sprouts parallel futures, scores probability via Monte Carlo models, and commits to the best path.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SIMULATION SANDBOX -->
+  <section class="simulation-section" id="simulation">
+    <div class="page-container-wide">
+
+      <!-- Section Header -->
+      <div class="simulation-column">
+        <div>
+          <div class="simulation-row">
+            <span class="ping-dot"></span>
+            Interactive Simulation Engine
+          </div>
+          <h2 class="simulation-heading">
+            The Living Wave in Action
+          </h2>
+          <p class="simulation-text">
+            Recreated directly from the deployed proof-of-concept dashboard. Drag nodes, adjust timeline scrubber, or branch into alternative futures in real-time.
+          </p>
+        </div>
+
+        <!-- Simulation Controls -->
+        <div class="simulation-row-2">
+          <button id="toggleBranchBtn" type="button" onclick="toggleScenarioBranch()"
+                  class="branch-toggle-button">
+            <span class="amber-dot"></span>
+            Sprout Scenario Branch (Pivot +3 Mo)
+          </button>
+          <button id="commitBranchBtn" type="button" onclick="commitBranchScenario()" style="display: none;"
+                  class="branch-commit-button">
+            <svg class="simulation-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+            Commit Branch as Primary
+          </button>
+          <button type="button" onclick="resetSimulation()" class="simulation-button glass-panel">
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- THE DASHBOARD CANVAS CONTAINER -->
+      <div class="glass-panel-glow simulation-card">
+
+        <!-- Dashboard Top Metric Bar -->
+        <div class="simulation-row-3">
+          <div class="row-centered">
+            <span class="simulation-text-2">Project Roadmap</span>
+            <span class="simulation-text-3">• Drag wave / scrub slider • Admin: edit + inspect</span>
+          </div>
+
+          <!-- 4 Stat Counters -->
+          <div class="simulation-grid">
+            <div class="stat-box">
+              <span class="stat-box-label">Milestones</span>
+              <span class="simulation-text-4" id="statMilestones">24</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-box-label">Done</span>
+              <span class="simulation-text-5" id="statDone">5</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-box-label">In Progress</span>
+              <span class="stat-value stat-value--amber" id="statInProgress">4</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-box-label">Confidence</span>
+              <span class="stat-value stat-value--blue" id="statConfidence">87%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="simulation-row-4">
+          <div class="simulation-row-5">
+            <button type="button" class="simulation-button-2">ALL</button>
+            <button type="button" class="filter-tag">PRE-LAUNCH</button>
+            <button type="button" class="filter-tag">PHASE 1</button>
+            <button type="button" class="filter-tag">PHASE 2</button>
+            <button type="button" class="filter-tag">PHASE 3</button>
+          </div>
+          <div class="simulation-row-6">
+            <span class="legend-item"><span class="simulation-dot"></span> Done</span>
+            <span class="legend-item"><span class="amber-dot"></span> In Progress</span>
+            <span class="legend-item"><span class="simulation-dot-2"></span> Upcoming</span>
+            <span id="branchLegend" class="legend-item" style="display: none;"><span class="simulation-dot-3"></span> Branch: +3 Mo R&D</span>
+          </div>
+        </div>
+
+        <p class="simulation-text-6">↔ Swipe the timeline to explore every milestone</p>
+
+        <!-- THE INTERACTIVE WAVE SVG CANVAS -->
+        <div class="simulation-card-2">
+
+          <!-- Grid backdrop lines -->
+          <div class="simulation-overlay" aria-hidden="true"></div>
+
+          <!-- Central reference line -->
+          <div class="simulation-overlay-2" aria-hidden="true"></div>
+
+          <!-- Scrollable wave track: keeps the SVG's true aspect ratio on
+               narrow screens instead of squashing it -->
+          <div class="wave-scroll simulation-box">
+            <svg id="waveSvg" viewBox="0 0 1000 320" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive project timeline wave showing the roadmap milestones">
+              <defs>
+                <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"/>
+                  <stop offset="50%" stop-color="#38bdf8" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9"/>
+                </linearGradient>
+
+                <linearGradient id="branchGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#ef4444" stop-opacity="0.9"/>
+                </linearGradient>
+
+                <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+
+                <filter id="amberGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- PRIMARY WAVE PATH -->
+              <path id="primaryWavePath"
+                    d="M 20,160 Q 150,110 270,160 T 520,160 T 770,160 T 980,160"
+                    fill="none"
+                    stroke="url(#cyanGradient)"
+                    stroke-width="4"
+                    filter="url(#cyanGlow)"
+                    class="wave-path-transition" />
+
+              <!-- SECONDARY BRANCH WAVE -->
+              <path id="branchWavePath"
+                    d="M 520,160 Q 640,60 760,110 T 980,90"
+                    fill="none"
+                    stroke="url(#branchGradient)"
+                    stroke-width="3.5"
+                    stroke-dasharray="8 4"
+                    filter="url(#amberGlow)"
+                    opacity="0"
+                    class="wave-path-transition" />
+
+              <!-- Historical committed path -->
+              <path id="historicalPath"
+                    d=""
+                    fill="none"
+                    stroke="#475569"
+                    stroke-width="2"
+                    stroke-dasharray="4 4"
+                    opacity="0" />
+
+              <!-- Node 1 -->
+              <g class="wave-node" data-node-index="0" tabindex="0" role="button" aria-label="Legal and CAC Registration — done, week 0" onclick="selectNode(0)" transform="translate(120, 135)">
+                <circle r="16" class="wave-node-done" />
+                <circle r="6" class="simulation-svg-circle" />
+                <text x="0" y="-24" text-anchor="middle" class="wave-node-label">Legal & CAC</text>
+                <text x="0" y="-12" text-anchor="middle" class="wave-node-status-done">DONE (Wk 0)</text>
+              </g>
+
+              <!-- Node 2 -->
+              <g class="wave-node" data-node-index="1" tabindex="0" role="button" aria-label="Brand Identity and Architecture — done, week 2" onclick="selectNode(1)" transform="translate(320, 175)">
+                <circle r="16" class="wave-node-done" />
+                <circle r="6" class="simulation-svg-circle-2" />
+                <text x="0" y="32" text-anchor="middle" class="wave-node-label">Brand Identity</text>
+                <text x="0" y="44" text-anchor="middle" class="wave-node-status-done">DONE (Wk 2)</text>
+              </g>
+
+              <!-- Node 3: Pivot anchor node -->
+              <g id="nodeAnchor" class="wave-node" data-node-index="2" tabindex="0" role="button" aria-label="Engine MVP and POC Wave — live, week 8" onclick="selectNode(2)" transform="translate(520, 160)">
+                <circle r="20" class="simulation-svg-circle-3" />
+                <circle r="8" class="simulation-svg-circle-4" />
+                <text x="0" y="-28" text-anchor="middle" class="simulation-svg-label">Engine MVP</text>
+                <text x="0" y="-14" text-anchor="middle" class="simulation-svg-label-2">LIVE (Wk 8)</text>
+              </g>
+
+              <!-- Node 4: Main path original -->
+              <g id="mainNode4" class="wave-node" data-node-index="3" tabindex="0" role="button" aria-label="Global Beta Launch — planned for Q3" onclick="selectNode(3)" transform="translate(740, 160)">
+                <circle r="16" class="simulation-svg-circle-5" />
+                <circle r="6" class="simulation-svg-circle-6" />
+                <text x="0" y="30" text-anchor="middle" class="wave-node-label">Global Beta Launch</text>
+                <text x="0" y="42" text-anchor="middle" class="simulation-svg-label-3">Q3 PLANNED</text>
+              </g>
+
+              <!-- Node 5: Series A -->
+              <g id="mainNode5" class="wave-node" data-node-index="4" tabindex="0" role="button" aria-label="Series A Fundraise — horizon, Q4" onclick="selectNode(4)" transform="translate(930, 160)">
+                <circle r="16" class="simulation-svg-circle-7" />
+                <circle r="6" class="simulation-svg-circle-8" />
+                <text x="0" y="-24" text-anchor="middle" class="simulation-svg-label-4">Series A Round</text>
+                <text x="0" y="-12" text-anchor="middle" class="simulation-svg-label-5">HORIZON</text>
+              </g>
+
+              <!-- SPROUTED BRANCH NODES (Hidden initially) -->
+              <g id="branchNode1" style="display: none;" transform="translate(720, 95)">
+                <circle r="18" class="simulation-svg-circle-9" />
+                <circle r="6" class="simulation-svg-circle-10" />
+                <text x="0" y="-26" text-anchor="middle" class="simulation-svg-label-6">+3 Mo Deep R&D</text>
+                <text x="0" y="-14" text-anchor="middle" class="simulation-svg-label-7">CONFIDENCE: 92%</text>
+              </g>
+
+              <g id="branchNode2" style="display: none;" transform="translate(920, 85)">
+                <circle r="16" class="simulation-svg-circle-11" />
+                <circle r="6" class="simulation-svg-circle-12" />
+                <text x="0" y="-22" text-anchor="middle" class="simulation-svg-label-8">Superior Scaled Launch</text>
+                <text x="0" y="-10" text-anchor="middle" class="simulation-svg-label-9">LOWER RISK</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="wave-edge-fade wave-edge-fade--left simulation-box-2" aria-hidden="true"></div>
+          <div class="wave-edge-fade wave-edge-fade--right simulation-box-2" aria-hidden="true"></div>
+
+          <!-- Glass Floating Node Inspection Pill -->
+          <div id="nodeInfoPill" class="simulation-row-7 glass-panel">
+            <span class="simulation-dot-4"></span>
+            <span class="simulation-text-7">Focused: <strong class="simulation-strong" id="pillNodeTitle">Engine MVP (Wk 8)</strong></span>
+            <span class="simulation-text-8">|</span>
+            <span class="simulation-text-9" id="pillNodeStatus">Monte Carlo Confidence: 87% • RICE: 84</span>
+          </div>
+
+          <!-- Real-time AI Interrogation overlay tag -->
+          <div id="aiInterrogationBadge" class="simulation-row-8 glass-panel">
+            <svg class="simulation-icon-2" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle class="simulation-svg-circle-13" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="simulation-svg-line" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+            <span id="aiStatusText" class="simulation-text-10">AI Co-Pilot: Plan calibrated (0 conflicts)</span>
+          </div>
+        </div>
+
+        <!-- Interactive Wave Scrubber bar -->
+        <div class="glass-panel simulation-column-2">
+          <div class="simulation-row-9">
+            <span class="simulation-label">
+              Wave Scrubber
+            </span>
+            <input type="range" id="waveScrubber" min="0" max="100" value="45" class="simulation-field" oninput="handleScrubber(this.value)" aria-label="Timeline scrubber">
+          </div>
+
+          <div class="simulation-row-10">
+            <button type="button" onclick="stepWave(-1)" class="scrubber-button">&larr; Previous</button>
+            <button type="button" onclick="autoFlowSimulation()" id="autoFlowBtn" class="simulation-button-3">
+              &#9654; Auto Flow
+            </button>
+            <button type="button" onclick="stepWave(1)" class="scrubber-button">Next &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Milestone Task Cards Grid — every card is clickable and syncs the inspector pill above -->
+        <div class="simulation-grid-2">
+          <button type="button" class="milestone-card glass-panel milestone-done-card" data-node-index="0">
+            <div class="milestone-card-header">
+              <span class="milestone-card-title">Legal & CAC</span>
+              <span class="badge-done">DONE</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill-done"></div>
+            </div>
+            <span class="milestone-card-meta">Wk 0 • Pre-Launch</span>
+          </button>
+
+          <button type="button" class="milestone-card glass-panel milestone-done-card" data-node-index="1">
+            <div class="milestone-card-header">
+              <span class="milestone-card-title">Brand Identity</span>
+              <span class="badge-done">DONE</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill-done"></div>
+            </div>
+            <span class="milestone-card-meta">Wk 2 • Design</span>
+          </button>
+
+          <button type="button" class="milestone-card simulation-button-4 glass-panel" data-node-index="2">
+            <div class="milestone-card-header">
+              <span class="milestone-card-title">App Dev & Build</span>
+              <span class="simulation-badge">LIVE</span>
+            </div>
+            <div class="progress-track">
+              <div class="simulation-card-3"></div>
+            </div>
+            <span class="milestone-card-meta">Wk 8 • Engineering</span>
+          </button>
+
+          <button type="button" class="milestone-card simulation-button-5 glass-panel" data-node-index="3">
+            <div class="milestone-card-header">
+              <span class="milestone-card-title">Beta Outreach</span>
+              <span class="simulation-badge-2">NEXT</span>
+            </div>
+            <div class="progress-track">
+              <div class="simulation-card-4"></div>
+            </div>
+            <span class="milestone-card-meta">Wk 12 • Marketing</span>
+          </button>
+
+          <button type="button" class="milestone-card simulation-button-6 glass-panel" data-node-index="5">
+            <div class="milestone-card-header">
+              <span class="milestone-card-title">RAG Knowledge</span>
+              <span class="simulation-badge-3">NEXT</span>
+            </div>
+            <div class="progress-track">
+              <div class="simulation-card-5"></div>
+            </div>
+            <span class="milestone-card-meta">Wk 14 • AI Stack</span>
+          </button>
+
+          <button type="button" class="milestone-card simulation-button-7 glass-panel" data-node-index="4">
+            <div class="milestone-card-header">
+              <span class="simulation-text-11">Series A Pitch</span>
+              <span class="simulation-badge-4">HORIZON</span>
+            </div>
+            <div class="progress-track">
+              <div class="simulation-card-6"></div>
+            </div>
+            <span class="milestone-card-meta">Q4 • Dennis</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE PROBLEM -->
+  <section class="problem-section" id="problem">
+    <div class="page-container">
+
+      <div class="section-intro">
+        <span class="problem-label">The Strategic Planning Crisis</span>
+        <h2 class="section-title">
+          Strategic Planning Is Broken In Three Ways
+        </h2>
+        <p class="section-subtitle-lg">
+          Leaders spend billions on software yet still make critical board-level decisions on static spreadsheets and disconnect between chat AI and visual reality.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <!-- Problem 1 -->
+        <div class="glass-panel problem-card">
+          <div class="problem-row">
+            01
+          </div>
+          <h3 class="card-heading">Plans Are Static</h3>
+          <p class="problem-text">
+            Gantt charts and roadmaps represent a single, brittle version of the future. The moment an engineering lead slips by 2 weeks, the whole plan is wrong. There is no native way to see downstream ripple effects.
+          </p>
+          <div class="problem-card-2">
+            No native way to model alternatives without rebuilding from scratch.
+          </div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="glass-panel problem-card-3">
+          <div class="problem-row-2">
+            02
+          </div>
+          <h3 class="card-heading">AI Is Disconnected</h3>
+          <p class="problem-text">
+            Leaders brainstorm high-level strategy with ChatGPT or Claude in text conversations, then manually try to translate those takeaways into project tools. You think in one place and plan in another.
+          </p>
+          <div class="problem-card-4">
+            The cognitive gap between conversation & visualization destroys clarity.
+          </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="glass-panel problem-card-5">
+          <div class="problem-row-3">
+            03
+          </div>
+          <h3 class="card-heading">Built For Task Managers</h3>
+          <p class="problem-text">
+            Jira, Monday, and Asana are optimized for ticket backlogs and sprint velocity. They are bottom-up, not top-down. They were never designed for the C-suite executive, strategy director, or founder.
+          </p>
+          <div class="problem-card-6">
+            They manage tasks, not executive conviction or multi-future scenarios.
+          </div>
+        </div>
+      </div>
+
+      <!-- THE CORE INSIGHT BOX -->
+      <div class="glass-panel-glow problem-card-7">
+        <div class="problem-row-4">
+          <div class="problem-card-8">
+            <svg class="problem-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div>
+            <div class="problem-box">THE VANTAGE INSIGHT</div>
+            <p class="problem-text-2">
+              "People already chat with AI about their plans. They just do not have the simultaneous luxury of seeing those plans rendered as a living diagrammatic simulation. VANTAGE gives them both at once."
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: THREE CORE PILLARS -->
+  <section class="page-section" id="pillars">
+    <div class="page-container">
+
+      <div class="pillars-intro">
+        <span class="section-eyebrow">Engineered Architecture</span>
+        <h2 class="section-title">
+          The Three Pillars of VANTAGE
+        </h2>
+        <p class="section-subtitle-lg">
+          A strategic simulation platform at the exact intersection where no single product exists.
+        </p>
+      </div>
+
+      <!-- Pillar 1 -->
+      <div class="pillar-row">
+        <div class="pillar-column">
+          <div class="pillars-row">
+            PILLAR 01 • THE WAVE TIMELINE
+          </div>
+          <h3 class="pillar-title">
+            Momentum, Not Grids.
+          </h3>
+          <p class="pillar-text">
+            The primary visual metaphor is a smooth, animated wave representing the continuous flow of strategy. Milestones sit as living nodes on the wave that dynamically reshape as dates shift and variables update.
+          </p>
+          <ul class="pillars-list">
+            <li class="row-centered">
+              <span class="pillars-text">&#10003;</span>
+              <strong>4 milestones visible per screen view</strong> to enforce high-level strategic clarity over operational clutter.
+            </li>
+            <li class="row-centered">
+              <span class="pillars-text">&#10003;</span>
+              <strong>Micro-Macro Zoom:</strong> dive from a single week sprint to a 5-year macro horizon with smooth parallax scrolling.
+            </li>
+            <li class="row-centered">
+              <span class="pillars-text">&#10003;</span>
+              <strong>Deliberate Glass Side-Panels:</strong> replaces erratic drag-and-drop with intentional, calibrated editing.
+            </li>
+          </ul>
+        </div>
+        <div class="pillars-box">
+          <div class="glass-panel pillars-card">
+            <div class="pillars-box-2">// SVG Quadratic Bezier Curve Path</div>
+            <div class="pillars-card-2">
+              <code>&lt;path d="M 0,160 Q 150,110 300,160 T 600,160"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stroke="url(#neonCyan)"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filter="url(#glowFilter)" /&gt;</code>
+            </div>
+            <div class="pillars-row-2">
+              <span>FPS Target: 60fps</span>
+              <span class="pillars-text-2">Optimized SVG Over Canvas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar-row">
+        <div class="pillars-box-3">
+          <!-- Interactive AI Simulator Box -->
+          <div class="glass-panel-glow pillars-card-3">
+            <div class="pillars-row-3">
+              <div class="row-centered">
+                <span class="pillars-dot"></span>
+                <span>VANTAGE AI CO-PILOT (RAG + PM DATASETS)</span>
+              </div>
+              <span class="pillars-text-3">FASTAPI • WS REAL-TIME</span>
+            </div>
+            <div class="pillars-box-4">
+              <div class="pillars-card-4">
+                <span class="pillars-text-4">USER INPUT:</span>
+                "Can we run Beta Launch concurrently with our CAC Registration and CM hiring?"
+              </div>
+              <div class="pillars-card-5">
+                <span class="highlight-cyan-block">AI INTERROGATION ALERT:</span>
+                "Critical dependency conflict detected. Benchmarking against 420+ software rollouts reveals a <strong>78% delay probability</strong> when Community Management is delayed past Wk 6. Recommending a 2-week buffer."
+              </div>
+            </div>
+            <div class="pillars-row-4">
+              <input type="text" value="Recalculate with 2-week buffer and RICE score..." readonly aria-label="Example AI co-pilot prompt" class="pillars-field">
+              <button type="button" class="pillars-button">RUN</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pillars-box-5">
+          <div class="pillars-row-5">
+            PILLAR 02 • THE AI ANALYSIS LAYER
+          </div>
+          <h3 class="pillar-title">
+            Plan Interrogation, Not Just Prompts.
+          </h3>
+          <p class="pillar-text">
+            A native co-pilot trained on project management frameworks, strategic literature, and niche domain datasets (tech, healthcare, infrastructure) sits alongside your wave. It actively challenges your assumptions.
+          </p>
+          <ul class="pillar-list">
+            <li class="row-centered">
+              <span class="pillars-text-5">&#10003;</span>
+              <strong>Benchmarks against known frameworks:</strong> OKRs, RICE scoring, Monte Carlo simulation, and McKinsey scenario planning.
+            </li>
+            <li class="row-centered">
+              <span class="pillars-text-5">&#10003;</span>
+              <strong>Proactive Risk Flagging:</strong> identifies resource and timeline bottlenecks before they happen.
+            </li>
+            <li class="row-centered">
+              <span class="pillars-text-5">&#10003;</span>
+              <strong>Advisory plain-language optimization:</strong> 'Your Q3 hiring milestone conflicts with your Beta launch. Here are three ways to resolve it.'
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillars-grid">
+        <div class="pillar-column">
+          <div class="pillars-row-6">
+            PILLAR 03 • SCENARIO SIMULATION ENGINE
+          </div>
+          <h3 class="pillar-title">
+            Branch, Score, and Commit Futures.
+          </h3>
+          <p class="pillar-text">
+            The most differentiated capability. Users click any milestone node to sprout an alternate scenario branch. The AI computes Monte Carlo probability scores for each path in real time.
+          </p>
+          <ul class="pillar-list">
+            <li class="row-centered">
+              <span class="pillars-text-6">&#10003;</span>
+              <strong>Secondary Wave Sprouting:</strong> distinct color (amber default) runs parallel to evaluate divergence.
+            </li>
+            <li class="row-centered">
+              <span class="pillars-text-6">&#10003;</span>
+              <strong>Compare Mode:</strong> side-by-side or overlay view comparing timeline divergence, cost delta, and risk scores.
+            </li>
+            <li class="row-centered">
+              <span class="pillars-text-6">&#10003;</span>
+              <strong>Commit Mode:</strong> when the board approves a branch, it animates down into the primary wave; the old path fades into historical dotted memory.
+            </li>
+          </ul>
+        </div>
+
+        <div class="pillars-box">
+          <div class="glass-panel pillars-card-6">
+            <div class="pillars-row-7">
+              <span class="pillars-label">Compare Mode: Scenario Divergence</span>
+              <span class="pillars-text-7">DAG Graph Sync</span>
+            </div>
+            <div class="pillars-box-6">
+              <div class="pillars-row-8">
+                <div>
+                  <span class="pillars-text-8">Future A: Standard Path</span>
+                  <span class="small-note">Beta in Q3 • Standard Dev Cycle</span>
+                </div>
+                <div class="pillars-box-7">
+                  <span class="highlight-cyan">67% Conf.</span>
+                  <span class="pillars-text-9">High Burn</span>
+                </div>
+              </div>
+
+              <div class="pillars-row-9">
+                <div>
+                  <span class="pillars-text-10">Future B: +3 Mo R&D Pivot</span>
+                  <span class="small-note">Refined AI Model • Lower Defect Rate</span>
+                </div>
+                <div class="pillars-box-7">
+                  <span class="pillars-text-11">92% Conf.</span>
+                  <span class="pillars-text-12">+38% ROI</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" onclick="commitBranchScenario()" class="pillars-button-2">
+              Execute Board Approval Commit
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE BOARDROOM USE CASE -->
+  <section class="boardroom-section" id="boardroom">
+    <div class="page-container-narrow">
+
+      <div class="glass-panel-glow boardroom-card">
+        <div class="boardroom-row">
+          <span class="ping-dot"></span>
+          THE BOARDROOM USE CASE (JUNE 2026 ROADMAP)
+        </div>
+
+        <h3 class="boardroom-subheading">
+          "What if we delay global launch by three months to focus on R&D?"
+        </h3>
+
+        <div class="boardroom-grid">
+          <div class="boardroom-box">
+            <h4 class="boardroom-subheading-2">// The Old Reality</h4>
+            <p class="boardroom-text">
+              In an ordinary meeting, the Strategy Director stammers, promises to check with engineering, rebuilds the Gantt chart over the weekend, and sends a static 40-slide PDF on Monday that is already out of date.
+            </p>
+          </div>
+          <div class="boardroom-box">
+            <h4 class="boardroom-subheading-3">// The VANTAGE Reality</h4>
+            <p class="boardroom-text">
+              The Director speaks the scenario directly into VANTAGE AI. Within 4 seconds, a fully scored alternative wave appears alongside the original with Monte Carlo risk distributions. The board sees two distinct futures, not a to-do list.
+            </p>
+          </div>
+        </div>
+
+        <div class="boardroom-column">
+          <span class="boardroom-text-2">Ready to simulate this boardroom exchange?</span>
+          <button type="button" onclick="simulateBoardroomExchange()" class="boardroom-button">
+            Trigger Real-time Boardroom Demo
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: TARGET AUDIENCE & COMPETITIVE MATRIX -->
+  <section class="market-section" id="market">
+    <div class="page-container">
+
+      <div class="section-intro">
+        <span class="section-eyebrow">Market Opportunity & Moat</span>
+        <h2 class="section-title">
+          Why VANTAGE Wins
+        </h2>
+        <p class="section-subtitle">
+          A universal wave metaphor and AI intelligence layer tailored to six core high-stakes segments.
+        </p>
+      </div>
+
+      <!-- Target Segments 6 Cards -->
+      <div class="market-grid">
+        <div class="glass-panel market-card">
+          <span class="market-text">C-Suite Executives</span>
+          <h3 class="card-title">Board-Ready Visualisation</h3>
+          <p class="body-small-muted">No fumbling with Gantt charts or task boards. Boardroom scenario clarity rendered in seconds.</p>
+        </div>
+
+        <div class="glass-panel market-card-2">
+          <span class="market-text-2">Strategy & Consulting</span>
+          <h3 class="card-title">Multi-Scenario Presentations</h3>
+          <p class="body-small-muted">Visual simulations replace 80-page slide decks with interactive client exploration.</p>
+        </div>
+
+        <div class="glass-panel market-card-3">
+          <span class="market-text-3">Engineering & Product</span>
+          <h3 class="card-title">Multi-Phase Build with AI Risk</h3>
+          <p class="body-small-muted">Replaces backlog ticketing with intelligent simulation and dependency propagation.</p>
+        </div>
+
+        <div class="glass-panel market-card-4">
+          <span class="market-text-4">Creative Agencies</span>
+          <h3 class="card-title">Campaign Planning as Vision</h3>
+          <p class="body-small-muted">Clients see an ambitious flight path with aesthetic confidence, not an endless to-do checklist.</p>
+        </div>
+
+        <div class="glass-panel market-card-5">
+          <span class="market-text-5">Ambitious Individuals</span>
+          <h3 class="card-title">Career & 5-Year Strategy</h3>
+          <p class="body-small-muted">The first tool to make personal career roadmapping feel truly executive-grade and predictive.</p>
+        </div>
+
+        <div class="glass-panel market-card-6">
+          <span class="market-text-6">Government & NGOs</span>
+          <h3 class="card-title">Infrastructure & Rollout</h3>
+          <p class="body-small-muted">Probabilistic scenario modeling for high-stakes, long-horizon public capital projects.</p>
+        </div>
+      </div>
+
+      <!-- Competitive Landscape Table -->
+      <div class="glass-panel market-card-7">
+        <div class="market-row">
+          <span class="market-label">Competitive Landscape Analysis</span>
+          <span class="market-text-7">Document 4.2 Matrix</span>
+        </div>
+        <div class="market-box">
+          <table class="market-table">
+            <thead class="market-table-row">
+              <tr>
+                <th scope="col" class="table-header-cell">Category</th>
+                <th scope="col" class="table-header-cell">Market Examples</th>
+                <th scope="col" class="table-header-cell">What They Miss</th>
+                <th scope="col" class="market-table-head-cell">VANTAGE Edge</th>
+              </tr>
+            </thead>
+            <tbody class="market-table-row-2">
+              <tr class="market-table-row-3">
+                <td class="table-cell-name">Traditional PM Tools</td>
+                <td class="table-cell">Jira, Monday, Asana</td>
+                <td class="table-cell-negative">No simulation; built for task managers, not strategists</td>
+                <td class="table-cell-positive">Living wave flow + strategic momentum</td>
+              </tr>
+              <tr class="market-table-row-3">
+                <td class="table-cell-name">AI Roadmap Tools</td>
+                <td class="table-cell">Aha!, Productboard, Craft.io</td>
+                <td class="table-cell-negative">AI assists ticket backlog prioritization only</td>
+                <td class="table-cell-positive">Multi-scenario probabilistic simulation</td>
+              </tr>
+              <tr class="market-table-row-3">
+                <td class="table-cell-name">Scenario Planning</td>
+                <td class="table-cell">Anaplan, Mosaic, Epicflow</td>
+                <td class="table-cell-negative">Enterprise-only, finance-locked, no conversational UI</td>
+                <td class="table-cell-positive">Conversational AI for everyone</td>
+              </tr>
+              <tr class="market-table-row-3">
+                <td class="table-cell-name">Visual Whiteboards</td>
+                <td class="table-cell">Miro, SharpCloud</td>
+                <td class="table-cell-negative">Freeform drawings; zero AI intelligence or prediction</td>
+                <td class="table-cell-positive">DAG dependency graph + Monte Carlo scoring</td>
+              </tr>
+              <tr class="market-table-row-4">
+                <td class="market-table-cell">VANTAGE</td>
+                <td class="market-table-cell-2">This Product</td>
+                <td class="market-table-cell-3">Solved</td>
+                <td class="market-table-cell">Conversational AI + live visual simulation + prediction scoring</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6: TECHNICAL ARCHITECTURE & DEEP MODE SYSTEM -->
+  <section class="architecture-section" id="architecture">
+    <div class="page-container">
+
+      <div class="section-intro">
+        <span class="section-eyebrow">Technical Architecture</span>
+        <h2 class="section-title">
+          Three-Layer System: The Moat
+        </h2>
+        <p class="section-subtitle">
+          Each layer is independently valuable; the combination is the defensible moat.
+        </p>
+      </div>
+
+      <!-- 3 Layer System Breakdown -->
+      <div class="architecture-grid">
+        <div class="glass-panel architecture-card">
+          <div class="architecture-box">LAYER 01</div>
+          <h3 class="layer-title">Presentation Layer</h3>
+          <p class="layer-description">
+            Animated wave UI, branching visuals, side panels, and micro-macro zoom behavior.
+          </p>
+          <div class="layer-details-box">
+            <span class="architecture-text">• React (Vite) + Framer Motion</span>
+            <span class="architecture-text-2">• SVG Quadratic Bezier paths</span>
+            <span class="architecture-text-2">• Deep Mode color system</span>
+            <span class="architecture-text-2">• Glass-morphism backdrop filters</span>
+          </div>
+        </div>
+
+        <div class="glass-panel architecture-card-2">
+          <div class="architecture-box-2">LAYER 02</div>
+          <h3 class="layer-title">Intelligence Layer</h3>
+          <p class="layer-description">
+            AI co-pilot, domain knowledge injection, plan interrogation, and conversational reasoning.
+          </p>
+          <div class="layer-details-box">
+            <span class="architecture-text-3">• Claude API / GPT-4o base</span>
+            <span class="architecture-text-2">• Fine-tuned PM frameworks dataset</span>
+            <span class="architecture-text-2">• RAG pipeline for domain knowledge</span>
+            <span class="architecture-text-2">• WebSocket real-time updates</span>
+          </div>
+        </div>
+
+        <div class="glass-panel architecture-card-3">
+          <div class="architecture-box-3">LAYER 03</div>
+          <h3 class="layer-title">Simulation Layer</h3>
+          <p class="layer-description">
+            Prediction scoring, Monte Carlo modeling, and DAG dependency graph propagation.
+          </p>
+          <div class="layer-details-box">
+            <span class="architecture-text-4">• Python backend (FastAPI)</span>
+            <span class="architecture-text-2">• Monte Carlo probability engine</span>
+            <span class="architecture-text-2">• DAG task graph auto-propagation</span>
+            <span class="architecture-text-2">• Redis real-time state sync</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Training Data Strategy -->
+      <div class="glass-panel architecture-card-4">
+        <h3 class="architecture-subheading">
+          <span class="architecture-dot"></span>
+          Phased Training Data Strategy
+        </h3>
+        <div class="architecture-grid-2">
+          <div class="info-card">
+            <span class="highlight-cyan-block">Phase 1: Pre-launch</span>
+            <p class="body-text-muted">PMI research datasets on project overruns, construction/software failure patterns, and synthetic playbook benchmarks.</p>
+          </div>
+          <div class="info-card">
+            <span class="architecture-text-5">Phase 2: Early Traction</span>
+            <p class="body-text-muted">Users self-report historical project data in exchange for calibrated predictions. Opt-in anonymized benchmarking pool.</p>
+          </div>
+          <div class="info-card">
+            <span class="architecture-text-6">Phase 3: At Scale</span>
+            <p class="body-text-muted">VANTAGE becomes its own training source. Every completed plan and committed branch feeds the proprietary prediction weights.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 7: BUILD PHASES (ROADMAP) -->
+  <section class="page-section" id="roadmap">
+    <div class="page-container">
+
+      <div class="section-intro">
+        <span class="section-eyebrow">Execution Plan</span>
+        <h2 class="section-title">
+          Four-Phase Build Roadmap
+        </h2>
+        <p class="section-subtitle">
+          A disciplined, milestone-driven roadmap taking VANTAGE from MVP to platform defensibility.
+        </p>
+      </div>
+
+      <div class="roadmap-grid">
+
+        <!-- Phase 1 -->
+        <div class="glass-panel roadmap-column">
+          <div>
+            <span class="roadmap-label">Phase 1 • Months 1 to 3</span>
+            <h3 class="phase-title">The Living Wave</h3>
+            <p class="phase-description">
+              A usable, single-timeline tool proving the core visual metaphor.
+            </p>
+            <ul class="phase-task-list">
+              <li>• Infinite wave with Bezier curve</li>
+              <li>• 4-task pagination & viewIndex</li>
+              <li>• Glass-morphism side panel editing</li>
+              <li>• Deep Mode design system</li>
+              <li>• 50–100 beta users across 3 sectors</li>
+            </ul>
+          </div>
+          <div class="roadmap-card">
+            STATUS: POC LIVE & VALIDATED
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="glass-panel roadmap-column-2">
+          <div>
+            <span class="roadmap-label-2">Phase 2 • Months 4 to 7</span>
+            <h3 class="phase-title">The Branching Engine</h3>
+            <p class="phase-description">
+              Ships the core differentiator: scenario branching from any node.
+            </p>
+            <ul class="phase-task-list">
+              <li>• '+' hover trigger on milestone nodes</li>
+              <li>• Secondary wave rendering (amber)</li>
+              <li>• Split-screen Compare Mode</li>
+              <li>• Commit Mode animated swap</li>
+              <li>• Boardroom 'Pivot Play' ready</li>
+            </ul>
+          </div>
+          <div class="roadmap-card-2">
+            TARGET: Q3 2026 SPRINT
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="glass-panel roadmap-column-3">
+          <div>
+            <span class="roadmap-label-3">Phase 3 • Months 8 to 13</span>
+            <h3 class="phase-title">Prediction Engine</h3>
+            <p class="phase-description">
+              Adds probabilistic intelligence that makes VANTAGE predictive.
+            </p>
+            <ul class="phase-task-list">
+              <li>• Python Monte Carlo simulation</li>
+              <li>• Confidence score overlay (0-100%)</li>
+              <li>• DAG dependency auto-propagation</li>
+              <li>• Natural language scenario triggers</li>
+              <li>• Domain RAG knowledge selector</li>
+            </ul>
+          </div>
+          <div class="roadmap-card-3">
+            TARGET: Q1 2027 SPRINT
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="glass-panel roadmap-column-4">
+          <div>
+            <span class="roadmap-label-4">Phase 4 • Months 14 to 20</span>
+            <h3 class="phase-title">Scale & Ecosystem</h3>
+            <p class="phase-description">
+              Builds network effects, multiplayer collaboration, and data moat.
+            </p>
+            <ul class="phase-task-list">
+              <li>• Multiplayer wave collaboration</li>
+              <li>• Decision memory audit trails</li>
+              <li>• Board PDF/PowerPoint exports</li>
+              <li>• Jira, Slack, Google Cal sync</li>
+              <li>• Enterprise dashboard embed APIs</li>
+            </ul>
+          </div>
+          <div class="roadmap-card-4">
+            TARGET: DEFENSIVE SCALE
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 8: INVESTOR BRIEF -->
+  <section class="investor-section" id="investors">
+    <div class="page-container-narrow">
+      <div class="glass-panel-glow investor-card">
+
+        <!-- Headline + status -->
+        <div class="investor-column">
+          <div class="investor-intro">
+            <span class="investor-label">Investor Brief • Port Harcourt, Nigeria</span>
+            <h2 class="investor-heading">Invest in the platform where strategy comes alive</h2>
+            <p class="investor-text">
+              VANTAGE turns a conversation about strategy into living, branching futures and shows which one is most likely to win.
+              The proof of concept is live, the founding team is in place, and we are now opening conversations with investors for the Phase 1 build.
+            </p>
+          </div>
+          <div class="investor-box">
+            <span class="investor-text-2">Current Status</span>
+            <span class="investor-row">
+              <span class="live-dot"></span>
+              Open to investors
+            </span>
+          </div>
+        </div>
+
+        <!-- At a glance: four key facts -->
+        <div class="investor-stats">
+          <div class="investor-stat">
+            <span class="investor-stat-value">LIVE</span>
+            <span class="investor-stat-label">Proof of concept deployed</span>
+          </div>
+          <div class="investor-stat">
+            <span class="investor-stat-value">6</span>
+            <span class="investor-stat-label">Target audience segments</span>
+          </div>
+          <div class="investor-stat">
+            <span class="investor-stat-value">4</span>
+            <span class="investor-stat-label">Phase build roadmap</span>
+          </div>
+          <div class="investor-stat">
+            <span class="investor-stat-value">90</span>
+            <span class="investor-stat-label">Day target to Phase 1 MVP</span>
+          </div>
+        </div>
+
+        <!-- Proof -->
+        <div class="investor-box-2">
+          <h3 class="column-heading">Proof, not promises. Here is what already exists:</h3>
+          <div class="investor-grid">
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Live POC deployed at <strong>picadashboard.netlify.app</strong></span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Complete product concept, UX flows &amp; boardroom demo</span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Architectural specs: SVG Bezier, Framer Motion, DAG state</span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Competitive research confirming zero direct combined player</span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>6 target audience segmentations with verified use cases</span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Structured 4-phase build roadmap with clear 90-day targets</span></div>
+          </div>
+        </div>
+
+        <!-- The team -->
+        <div class="investor-box-3">
+          <h3 class="column-heading">The team behind VANTAGE</h3>
+          <div class="investor-grid-2">
+
+            <!-- Founder -->
+            <div class="investor-card-2">
+              <div class="investor-row-2">
+                <span>Dennis Ndubueze (Product, Strategy, GTM)</span>
+                <span class="investor-text-3">FOUNDER</span>
+              </div>
+              <ul class="checklist">
+                <li class="checklist-item"><span class="pillars-text">&bull;</span><span>Product vision &amp; concept architecture</span></li>
+                <li class="checklist-item"><span class="pillars-text">&bull;</span><span>Market positioning &amp; competitive differentiation</span></li>
+                <li class="checklist-item"><span class="pillars-text">&bull;</span><span>Go-to-market strategy &amp; early customer acquisition</span></li>
+                <li class="checklist-item"><span class="pillars-text">&bull;</span><span>Brand, content, and executive community building</span></li>
+                <li class="checklist-item"><span class="pillars-text">&bull;</span><span>Investor narrative and pitch materials</span></li>
+                <li class="checklist-item"><span class="pillars-text">&bull;</span><span>Domain expert relationships for training data partnerships</span></li>
+              </ul>
+            </div>
+
+            <!-- AI Engineer (TODO: add name and title here if you want them shown) -->
+            <div class="investor-card-3">
+              <div class="investor-row-3">
+                <span>AI Engineer (Technology &amp; AI)</span>
+                <span class="investor-text-4">ON BOARD</span>
+              </div>
+              <ul class="checklist">
+                <li class="checklist-item"><span class="pillars-text-5">&bull;</span><span>LLM selection, fine-tuning &amp; RAG pipeline build</span></li>
+                <li class="checklist-item"><span class="pillars-text-5">&bull;</span><span>Monte Carlo simulation engine &amp; dependency DAG</span></li>
+                <li class="checklist-item"><span class="pillars-text-5">&bull;</span><span>FastAPI design &amp; WebSocket real-time infrastructure</span></li>
+                <li class="checklist-item"><span class="pillars-text-5">&bull;</span><span>Model training data strategy &amp; output quality control</span></li>
+                <li class="checklist-item"><span class="pillars-text-5">&bull;</span><span>Technical due diligence &amp; engineering team building</span></li>
+                <li class="checklist-item"><span class="pillars-text-5">&bull;</span><span>Performance optimization (60fps SVG/canvas rendering)</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- What investment unlocks -->
+        <div class="investor-box-3">
+          <h3 class="column-heading">What your investment unlocks</h3>
+          <div class="investor-funds">
+            <div class="investor-fund">
+              <span class="investor-fund-title">Phase 1 production MVP</span>
+              <span class="investor-fund-text">A disciplined 90-day sprint from live proof of concept to a production-ready product.</span>
+            </div>
+            <div class="investor-fund">
+              <span class="investor-fund-title">The AI engine</span>
+              <span class="investor-fund-text">LLM fine-tuning, the RAG pipeline and the Monte Carlo simulation engine behind every branching future.</span>
+            </div>
+            <div class="investor-fund">
+              <span class="investor-fund-title">Training data partnerships</span>
+              <span class="investor-fund-text">Domain-expert relationships that improve the quality of the model's outputs.</span>
+            </div>
+            <div class="investor-fund">
+              <span class="investor-fund-title">Early customers</span>
+              <span class="investor-fund-text">10 to 15 beta users validating Phase 1 across the 6 target segments.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to get involved -->
+        <div class="investor-card-4">
+          <h3 class="investor-subheading">How to get involved</h3>
+          <ol class="investor-list">
+            <li>Review the live proof of concept at <strong>vantage-tawny-rho.vercel.app</strong>.</li>
+            <li>Join a technical walkthrough of the architecture with our AI Engineer.</li>
+            <li>Go through the 4-phase roadmap and the 90-day Phase 1 targets with Dennis.</li>
+            <li>Discuss the round, the terms, and how your capital and network can accelerate the build.</li>
+          </ol>
+        </div>
+
+        <!-- Call to action -->
+        <div class="investor-column-2">
+          <div>
+            <div class="investor-box-4">Ready to back the Jarvis for Strategy?</div>
+            <div class="investor-box-5">Reach Dennis directly • Confidential Investor Outreach</div>
+          </div>
+          <div class="investor-actions">
+            <a href="https://vantage-tawny-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="investor-link-button">View Live POC &#8599;</a>
+            <button type="button" onclick="openContactModal(this)" class="investor-button">Request Investor Access &rarr;</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- The One-Line Pitch Banner -->
+  <section class="pitch-section">
+    <div class="pitch-box">
+      <div class="pitch-box-2">THE ONE-LINE PITCH</div>
+      <blockquote class="pitch-box-3">
+        "VANTAGE is the first platform where you talk about your strategy and watch it come alive, branch into futures, and tell you which one is most likely to win."
+      </blockquote>
+      <div class="pitch-box-4">
+        Dennis Ndubueze • Business Development & Strategy • Port Harcourt, Nigeria • October 2026
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-footer">
+    <div class="footer-column">
+      <div class="row-centered">
+        <span class="highlight-cyan">VANTAGE</span>
+        <span>• Visualise the Momentum of Strategy</span>
+      </div>
+      <div>
+        <span>Confidential Investor Brief • October 2026</span>
+      </div>
+      <div class="footer-row">
+        <a href="https://vantage-tawny-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer-link">POC Preview</a>
+        <a href="#vision" class="footer-link">Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTopBtn" type="button" class="back-to-top-button glass-panel-glow" aria-label="Back to top">
+    <svg class="back-to-top-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- MODAL: Investor & Early-Access Dialog -->
+  <div id="contactModal" class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-panel glass-panel-glow modal-card">
+      <button type="button" onclick="closeContactModal()" class="modal-button" aria-label="Close dialog">
+        &times; CLOSE
+      </button>
+
+      <div class="problem-box">
+        Investor Access &amp; Early Connection
+      </div>
+      <h3 id="modalTitle" class="card-heading">Connect with Dennis Ndubueze</h3>
+      <p class="modal-text">
+        Whether you are an investor interested in the Phase 1 round, or a strategy executive requesting early access for your team.
+      </p>
+
+      <form id="leadForm" onsubmit="handleLeadSubmit(event)" class="modal-form">
+        <div>
+          <label for="leadName" class="form-label">Your Full Name</label>
+          <input id="leadName" name="name" type="text" required placeholder="e.g. Alex Chen" class="form-field">
+        </div>
+        <div>
+          <label for="leadEmail" class="form-label">Your Email</label>
+          <input id="leadEmail" name="email" type="email" required placeholder="name@company.com" class="form-field">
+        </div>
+        <div>
+          <label for="leadRole" class="form-label">Your Role / Interest</label>
+          <select id="leadRole" name="role" class="form-field">
+                        <option value="investor">Investor / Angel / Fund</option>
+            <option value="beta">Strategy Executive / Beta User</option>
+            <option value="other">Other Partnership Inquiry</option>
+          </select>
+        </div>
+        <div>
+          <label for="leadNote" class="form-label">Note or LinkedIn URL</label>
+          <textarea id="leadNote" name="note" rows="3" placeholder="Tell Dennis about your fund, investment focus or strategic context..." class="form-field"></textarea>
+        </div>
+        <!-- Spam trap: hidden from people, bots tend to fill it in -->
+        <div class="honeypot" aria-hidden="true">
+          <label for="leadWebsite">Leave this field empty</label>
+          <input id="leadWebsite" name="_honey" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="modal-button-2">
+          Submit Introduction
+        </button>
+      </form>
+      <div id="formFeedback" class="form-feedback" role="status">
+        Thank you! Dennis has received your message and will reply directly.
+      </div>
+      <div id="formError" class="form-error" role="alert"></div>
+    </div>
+  </div>
+
+</body>
+</html>
