@@ -4567,7 +4567,7 @@ body{overflow-x:hidden}
 .vx-hero{padding-top:clamp(2rem,4vw,3.5rem)}
 
 /* ==== Header: floating pill nav (logo | centred links | outlined CTA) ==== */
-.vx-logo{text-decoration:none;font:20px "Space Grotesk",sans-serif;letter-spacing:.02em;color:var(--text);white-space:nowrap}
+.vx-logo{text-decoration:none;font:13px "Space Grotesk",sans-serif;letter-spacing:.02em;color:var(--text);white-space:nowrap}
 .vx-logo-a{color:var(--cyan)}
 @media(min-width:1280px){
   .header-header.glass-panel{width:calc(100% - 2rem);max-width:1240px;margin:.75rem auto 0;top:.75rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:linear-gradient(180deg,rgba(15,20,32,.92),rgba(8,11,18,.94));backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
