@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="styles.css">
   <!-- All interactive behaviour (menu, simulator, modal, scroll effects) -->
   <script src="script.js" defer></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"></head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">  <meta name="robots" content="noindex, nofollow">
+</head>
 <body>
 
   <a href="#main-content" class="page-link">
@@ -76,7 +77,7 @@
           <a href="#pillars" class="nav-link mobile-nav-link">Core Pillars</a>
           <a href="#architecture" class="nav-link mobile-nav-link">Architecture</a>
           <a href="#roadmap" class="nav-link mobile-nav-link">Roadmap</a>
-          <a href="#investors" class="nav-link header-link-3">Investors</a>
+          <a href="#investors" class="nav-link mobile-nav-link">Investors</a>
           <a href="https://vantage-tawny-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="nav-link mobile-nav-link vx-menu-poc">View the Live POC <span class="sr-only">(opens in a new tab)</span></a>
         </nav>
       </div>
@@ -91,7 +92,7 @@
       <div class="vx-hero-copy">
         <p class="vx-eyebrow">AI-powered strategy simulation</p>
         <h1 class="vx-title">See your strategy before you commit.</h1>
-        <p class="vx-lede">VANTAGE turns strategic plans into living, branching simulations, helping teams explore risks, compare possibilities and make more informed decisions before choosing a path.</p>
+        <p class="vx-lede">VANTAGE is being built to turn strategic plans into living, branching simulations, helping teams explore risks, compare possibilities and make more informed decisions before choosing a path. The wave timeline is live today.</p>
         <div class="vx-cta">
           <button onclick="scrollToDemo()" type="button" class="hero-button">Explore the Live Simulation</button>
           <a href="https://vantage-tawny-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="vx-secondary">View the Live POC <span class="sr-only">(opens in a new tab)</span></a>
@@ -101,13 +102,13 @@
       <figure class="vx-preview" aria-label="Illustrative preview of the Living Wave with a baseline plan and an alternative scenario">
         <div class="vx-preview-bar"><span>Living Wave</span><span class="vx-chip vx-chip-demo">Illustrative</span></div>
         <svg viewBox="0 0 560 260" role="img" aria-label="Baseline wave in cyan with an amber alternative branch">
-          <defs><linearGradient id="vxBase" x1="0" x2="1"><stop offset="0" stop-color="#45D9F4"/><stop offset="1" stop-color="#7188FF"/></linearGradient></defs>
+          <defs><linearGradient id="vxBase" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#93c5fd"/></linearGradient></defs>
           <path pathLength="1" class="vx-draw" d="M20,150 Q110,90 200,150 T380,150 T540,120" fill="none" stroke="url(#vxBase)" stroke-width="3" stroke-linecap="round"/>
           <path d="M380,150 Q440,215 540,190" fill="none" stroke="#F4B65F" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>
           <circle cx="20" cy="150" r="7" fill="#43D6A0"/><circle cx="200" cy="150" r="7" fill="#43D6A0"/>
-          <circle cx="290" cy="128" r="9" fill="#070B14" stroke="#45D9F4" stroke-width="3"/>
-          <circle cx="380" cy="150" r="7" fill="#7188FF"/><circle cx="540" cy="190" r="7" fill="#F4B65F"/>
-          <text x="290" y="106" fill="#A4B0C3" font-size="12" text-anchor="middle">Active</text>
+          <circle cx="290" cy="128" r="9" fill="#040b19" stroke="#38bdf8" stroke-width="3"/>
+          <circle cx="380" cy="150" r="7" fill="#93c5fd"/><circle cx="540" cy="190" r="7" fill="#F4B65F"/>
+          <text x="290" y="106" fill="#8da2c0" font-size="12" text-anchor="middle">Active</text>
           <text x="470" y="236" fill="#F4B65F" font-size="12" text-anchor="middle">Alternative: +3 mo R&amp;D</text>
         </svg>
         <div class="vx-panels">
@@ -118,9 +119,9 @@
       </figure>
     </div>
     <div class="vx-pillars">
-      <article><h2>Visualise</h2><p>A Living Wave that shows milestones and strategic momentum, replacing static Gantt clutter.</p></article>
-      <article><h2>Analyse</h2><p>AI-assisted interrogation of plans, dependencies and assumptions. Planned capability shown as a concept in this demo.</p></article>
-      <article><h2>Simulate</h2><p>Sprout an alternative path, review the implications and compare scenarios. Confidence values are illustrative.</p></article>
+      <article><h2>Visualise</h2><p>A Living Wave that shows milestones and strategic momentum, replacing static Gantt clutter. Live in the proof of concept.</p></article>
+      <article><h2>Analyse</h2><p>Will flag timeline overruns and resource conflicts using PM frameworks such as RICE (in development). Shown as a concept in this demo.</p></article>
+      <article><h2>Simulate</h2><p>Will sprout parallel futures, score their probability with Monte Carlo models, and commit to the best path (in development). Confidence values are illustrative.</p></article>
     </div>
   </section>
 
@@ -133,13 +134,13 @@
         <div>
           <div class="simulation-row">
             <span class="ping-dot"></span>
-            Interactive Simulation Engine
+            Interactive Preview (sample data)
           </div>
           <h2 class="simulation-heading">
             The Living Wave in Action
           </h2>
           <p class="simulation-text">
-            Recreated directly from the deployed proof-of-concept dashboard. Select milestones, adjust the timeline scrubber, or branch into alternative futures in real-time.
+            An illustrative preview of the target experience, based on the wave timeline in our live proof of concept. Branching, confidence scores and AI alerts shown here use sample data and are not yet in the product.
           </p>
         </div>
 
@@ -163,12 +164,13 @@
 
       <!-- THE DASHBOARD CANVAS CONTAINER -->
       <div class="glass-panel-glow simulation-card">
+    <p class="sample-note">Sample data for illustration. Branching, confidence scores and AI analysis are in development and not yet in the product.</p>
 
         <!-- Dashboard Top Metric Bar -->
         <div class="simulation-row-3">
           <div class="row-centered">
             <span class="simulation-text-2">Project Roadmap</span>
-            <span class="simulation-text-3">• Use the timeline slider or select a milestone to inspect it</span>
+            <span class="simulation-text-3">• Use the scrubber or select a milestone • Sample data</span>
           </div>
 
           <!-- 4 Stat Counters -->
@@ -227,7 +229,7 @@
             <svg id="waveSvg" viewBox="0 0 1000 320" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive project timeline wave showing the roadmap milestones">
               <defs>
                 <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"/>
+                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
                   <stop offset="50%" stop-color="#38bdf8" stop-opacity="1"/>
                   <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9"/>
                 </linearGradient>
@@ -300,10 +302,10 @@
               </g>
 
               <!-- Node 3: Pivot anchor node -->
-              <g id="nodeAnchor" class="wave-node" data-node-index="2" tabindex="0" role="button" aria-label="Engine MVP and POC Wave — live, week 8" onclick="selectNode(2)" transform="translate(520, 160)">
+              <g id="nodeAnchor" class="wave-node" data-node-index="2" tabindex="0" role="button" aria-label="Wave MVP — live, week 8" onclick="selectNode(2)" transform="translate(520, 160)">
                 <circle r="20" class="simulation-svg-circle-3" />
                 <circle r="8" class="simulation-svg-circle-4" />
-                <text x="0" y="-28" text-anchor="middle" class="simulation-svg-label">Engine MVP</text>
+                <text x="0" y="-28" text-anchor="middle" class="simulation-svg-label">Wave MVP</text>
                 <text x="0" y="-14" text-anchor="middle" class="simulation-svg-label-2">LIVE (Wk 8)</text>
               </g>
 
@@ -315,11 +317,11 @@
                 <text x="0" y="42" text-anchor="middle" class="simulation-svg-label-3">Q3 PLANNED</text>
               </g>
 
-              <!-- Node 5: Series A -->
-              <g id="mainNode5" class="wave-node" data-node-index="4" tabindex="0" role="button" aria-label="Series A Fundraise — horizon, Q4" onclick="selectNode(4)" transform="translate(930, 160)">
+              <!-- Node 5: Funding Round -->
+              <g id="mainNode5" class="wave-node" data-node-index="4" tabindex="0" role="button" aria-label="Funding Round — horizon, Q4" onclick="selectNode(4)" transform="translate(930, 160)">
                 <circle r="16" class="simulation-svg-circle-7" />
                 <circle r="6" class="simulation-svg-circle-8" />
-                <text x="0" y="-24" text-anchor="middle" class="simulation-svg-label-4">Series A Round</text>
+                <text x="0" y="-24" text-anchor="middle" class="simulation-svg-label-4">Funding Round</text>
                 <text x="0" y="-12" text-anchor="middle" class="simulation-svg-label-5">HORIZON</text>
               </g>
 
@@ -328,7 +330,7 @@
                 <circle r="18" class="simulation-svg-circle-9" />
                 <circle r="6" class="simulation-svg-circle-10" />
                 <text x="0" y="-26" text-anchor="middle" class="simulation-svg-label-6">+3 Mo Deep R&D</text>
-                <text x="0" y="-14" text-anchor="middle" class="simulation-svg-label-7">CONFIDENCE: 92%</text>
+                <text x="0" y="-14" text-anchor="middle" class="simulation-svg-label-7">SAMPLE: 92%</text>
               </g>
 
               <g id="branchNode2" style="display: none;" transform="translate(920, 85)">
@@ -346,15 +348,15 @@
           <!-- Glass Floating Node Inspection Pill -->
           <div id="nodeInfoPill" class="simulation-row-7 glass-panel">
             <span class="simulation-dot-4"></span>
-            <span class="simulation-text-7">Focused: <strong class="simulation-strong" id="pillNodeTitle">Engine MVP (Wk 8)</strong></span>
+            <span class="simulation-text-7">Focused: <strong class="simulation-strong" id="pillNodeTitle">Wave MVP (Wk 8)</strong></span>
             <span class="simulation-text-8">|</span>
-            <span class="simulation-text-9" id="pillNodeStatus">Monte Carlo Confidence: 87% • RICE: 84</span>
+            <span class="simulation-text-9" id="pillNodeStatus">Sample data: confidence 87%</span>
           </div>
 
           <!-- Real-time AI Interrogation overlay tag -->
           <div id="aiInterrogationBadge" class="simulation-row-8 glass-panel">
             <svg class="simulation-icon-2" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle class="simulation-svg-circle-13" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="simulation-svg-line" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
-            <span id="aiStatusText" class="simulation-text-10">AI Co-Pilot: Plan calibrated (0 conflicts)</span>
+            <span id="aiStatusText" class="simulation-text-10">AI Co-Pilot (concept): sample output</span>
           </div>
         </div>
 
@@ -435,7 +437,7 @@
 
           <button type="button" class="milestone-card simulation-button-7 glass-panel" data-node-index="4">
             <div class="milestone-card-header">
-              <span class="simulation-text-11">Series A Pitch</span>
+              <span class="simulation-text-11">Funding Round Pitch</span>
               <span class="simulation-badge-4">HORIZON</span>
             </div>
             <div class="progress-track">
@@ -473,7 +475,7 @@
           Strategic Planning Is Broken In Three Ways
         </h2>
         <p class="section-subtitle-lg">
-          Leaders spend billions on software yet still make critical board-level decisions on static spreadsheets and disconnect between chat AI and visual reality.
+          Leaders spend heavily on software yet still make critical board-level decisions on static spreadsheets and disconnect between chat AI and visual reality.
         </p>
       </div>
 
@@ -559,7 +561,7 @@
       <div class="pillar-row">
         <div class="pillar-column">
           <div class="pillars-row">
-            PILLAR 01 • THE WAVE TIMELINE
+            PILLAR 01 • THE WAVE TIMELINE (LIVE IN POC)
           </div>
           <h3 class="pillar-title">
             Momentum, Not Grids.
@@ -603,9 +605,9 @@
             <div class="pillars-row-3">
               <div class="row-centered">
                 <span class="pillars-dot"></span>
-                <span>VANTAGE AI CO-PILOT (RAG + PM DATASETS)</span>
+                <span>VANTAGE AI CO-PILOT (CONCEPT PREVIEW)</span>
               </div>
-              <span class="pillars-text-3">FASTAPI • WS REAL-TIME</span>
+              <span class="pillars-text-3">PREVIEW</span>
             </div>
             <div class="pillars-box-4">
               <div class="pillars-card-4">
@@ -614,25 +616,25 @@
               </div>
               <div class="pillars-card-5">
                 <span class="highlight-cyan-block">AI INTERROGATION ALERT:</span>
-                "Critical dependency conflict detected. Benchmarking against 420+ software rollouts reveals a <strong>78% delay probability</strong> when Community Management is delayed past Wk 6. Recommending a 2-week buffer."
+                "Possible dependency conflict detected. Plans like this often slip when a key hire is late. Suggested next step: add a 2-week buffer and recheck the timeline."
               </div>
             </div>
             <div class="pillars-row-4">
               <input type="text" value="Recalculate with 2-week buffer and RICE score..." readonly aria-label="Example AI co-pilot prompt" class="pillars-field">
-              <button type="button" class="pillars-button">RUN</button>
+              <button type="button" class="pillars-button" disabled aria-disabled="true" title="Not available yet">RUN</button>
             </div>
           </div>
         </div>
 
         <div class="pillars-box-5">
           <div class="pillars-row-5">
-            PILLAR 02 • THE AI ANALYSIS LAYER
+            PILLAR 02 • THE AI ANALYSIS LAYER (IN DEVELOPMENT)
           </div>
           <h3 class="pillar-title">
             Plan Interrogation, Not Just Prompts.
           </h3>
           <p class="pillar-text">
-            A native co-pilot trained on project management frameworks, strategic literature, and niche domain datasets (tech, healthcare, infrastructure) sits alongside your wave. It actively challenges your assumptions.
+            The planned co-pilot will be grounded in project management frameworks, strategic literature and niche domain datasets (tech, construction, healthcare), and will sit alongside your wave to challenge your assumptions.
           </p>
           <ul class="pillar-list">
             <li class="row-centered">
@@ -652,13 +654,13 @@
       <div class="pillars-grid">
         <div class="pillar-column">
           <div class="pillars-row-6">
-            PILLAR 03 • SCENARIO SIMULATION ENGINE
+            PILLAR 03 • SCENARIO SIMULATION ENGINE (IN DEVELOPMENT)
           </div>
           <h3 class="pillar-title">
             Branch, Score, and Commit Futures.
           </h3>
           <p class="pillar-text">
-            The most differentiated capability. Users click any milestone node to sprout an alternate scenario branch. The AI computes Monte Carlo probability scores for each path in real time.
+            The most differentiated capability. Users click any milestone node to sprout an alternate scenario branch. The AI will compute Monte Carlo probability scores for each path in real time.
           </p>
           <ul class="pillar-list">
             <li class="row-centered">
@@ -677,7 +679,7 @@
           <div class="glass-panel pillars-card-6">
             <div class="pillars-row-7">
               <span class="pillars-label">Compare Mode: Scenario Divergence</span>
-              <span class="pillars-text-7">DAG Graph Sync</span>
+              <span class="pillars-text-7">SAMPLE DATA</span>
             </div>
             <div class="pillars-box-6">
               <div class="pillars-row-8">
@@ -698,7 +700,7 @@
                 </div>
                 <div class="pillars-box-7">
                   <span class="pillars-text-11">92% Conf.</span>
-                  <span class="pillars-text-12">+38% ROI</span>
+                  <span class="pillars-text-12">Lower risk</span>
                 </div>
               </div>
             </div>
@@ -715,7 +717,7 @@
   <!-- SECTION 4: THE BOARDROOM USE CASE -->
   <section class="boardroom-section vx-board" id="boardroom" aria-labelledby="boardHeading">
     <div class="vx-wrap">
-      <p class="vx-eyebrow">The boardroom scenario</p>
+      <p class="vx-eyebrow">The boardroom use case (target experience)</p>
       <h2 class="vx-h2" id="boardHeading">&ldquo;What if we delay global launch by three months to focus on R&amp;D?&rdquo;</h2>
       <p class="vx-sub">The same question, answered two ways. The VANTAGE column is a concept shown with illustrative demo values.</p>
       <div class="vx-compare">
@@ -727,13 +729,13 @@
         </article>
         <article class="vx-card vx-card-alt">
           <span class="vx-chip vx-chip-alt">Alternative scenario (concept)</span>
-          <h3>The VANTAGE reality</h3>
-          <p>The Director describes the scenario and VANTAGE shows an alternative wave alongside the original, so the board compares two futures instead of reading a to-do list.</p>
+          <h3>The VANTAGE vision</h3>
+          <p>With VANTAGE, the Director will speak the scenario directly to the AI, and a scored alternative wave will appear alongside the original within seconds. The board will see two distinct futures, not a to-do list.</p>
           <dl class="vx-facts"><div><dt>Launch</dt><dd>Global Beta, +3 months</dd></div><div><dt>Demo confidence</dt><dd>92% (illustrative)</dd></div><div><dt>Format</dt><dd>Side-by-side waves</dd></div></dl>
         </article>
       </div>
       <div class="vx-board-cta">
-        <button type="button" onclick="simulateBoardroomExchange()" class="hero-button">Run this scenario in the simulation</button>
+        <button type="button" onclick="simulateBoardroomExchange()" class="hero-button">Play the Boardroom Preview (sample data)</button>
         <span class="vx-note">Scrolls to the wave and sprouts the +3 month branch.</span>
       </div>
     </div>
@@ -749,7 +751,7 @@
           Why VANTAGE Wins
         </h2>
         <p class="section-subtitle">
-          A universal wave metaphor and AI intelligence layer tailored to six core high-stakes segments.
+          A universal wave metaphor and AI layer, starting with executives and strategy teams and built to extend to six segments.
         </p>
       </div>
 
@@ -796,7 +798,7 @@
       <div class="glass-panel market-card-7">
         <div class="market-row">
           <span class="market-label">Competitive Landscape Analysis</span>
-          <span class="market-text-7">Document 4.2 Matrix</span>
+          <span class="market-text-7">Competitive landscape</span>
         </div>
         <div class="market-box">
           <table class="market-table">
@@ -836,7 +838,7 @@
               <tr class="market-table-row-4">
                 <td class="market-table-cell">VANTAGE</td>
                 <td class="market-table-cell-2">This Product</td>
-                <td class="market-table-cell-3">Solved</td>
+                <td class="market-table-cell-3">Our target position</td>
                 <td class="market-table-cell">Conversational AI + live visual simulation + prediction scoring</td>
               </tr>
             </tbody>
@@ -964,7 +966,7 @@
             </ul>
           </div>
           <div class="roadmap-card">
-            STATUS: POC LIVE & VALIDATED
+            STATUS: POC LIVE
           </div>
         </div>
 
@@ -985,7 +987,7 @@
             </ul>
           </div>
           <div class="roadmap-card-2">
-            TARGET: Q3 2026 SPRINT
+            TARGET: MONTHS 4 TO 7
           </div>
         </div>
 
@@ -1006,7 +1008,7 @@
             </ul>
           </div>
           <div class="roadmap-card-3">
-            TARGET: Q1 2027 SPRINT
+            TARGET: MONTHS 8 TO 13
           </div>
         </div>
 
@@ -1027,7 +1029,7 @@
             </ul>
           </div>
           <div class="roadmap-card-4">
-            TARGET: DEFENSIVE SCALE
+            TARGET: MONTHS 14 TO 20
           </div>
         </div>
 
@@ -1048,7 +1050,7 @@
             <h2 class="investor-heading">Invest in the platform where strategy comes alive</h2>
             <p class="investor-text">
               VANTAGE turns a conversation about strategy into living, branching futures and shows which one is most likely to win.
-              The proof of concept is live, the founding team is in place, and we are now opening conversations with investors for the Phase 1 build.
+              The wave timeline proof of concept is live, the founding team is in place, and we are opening conversations with early-stage investors for the Phase 1 build.
             </p>
           </div>
           <div class="investor-box">
@@ -1084,11 +1086,11 @@
         <div class="investor-box-2">
           <h3 class="column-heading">Proof, not promises. Here is what already exists:</h3>
           <div class="investor-grid">
-            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Live POC deployed at <strong>picadashboard.netlify.app</strong></span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Live POC deployed (password-protected, access on request)</span></div>
             <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Complete product concept, UX flows &amp; boardroom demo</span></div>
             <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Architectural specs: SVG Bezier, Framer Motion, DAG state</span></div>
-            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Competitive research confirming zero direct combined player</span></div>
-            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>6 target audience segmentations with verified use cases</span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Competitive research: no direct competitor found combining all three capabilities</span></div>
+            <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>6 target segments identified, now being validated through interviews</span></div>
             <div class="step-row"><span class="highlight-cyan">&#10003;</span><span>Structured 4-phase build roadmap with clear 90-day targets</span></div>
           </div>
         </div>
@@ -1121,7 +1123,7 @@
         <header class="vx-person-top">
           <span class="vx-avatar" aria-hidden="true">KJ</span>
           <div class="vx-person-id"><h4 class="vx-person-name">Kingsley Nwabueze Jide</h4><p class="vx-person-role">AI Engineer, Technology &amp; AI</p></div>
-          <span class="vx-badge">On board</span>
+          <span class="vx-badge">Founding team</span>
         </header>
         <ul class="vx-person-list">
           <li>LLM selection, fine-tuning &amp; RAG pipeline build</li>
@@ -1140,13 +1142,12 @@
         <header class="vx-person-top">
           <span class="vx-avatar" aria-hidden="true">V</span>
           <div class="vx-person-id"><h4 class="vx-person-name">Victor</h4><p class="vx-person-role">Frontend Developer</p></div>
-          <span class="vx-badge">On board</span>
+          <span class="vx-badge">Founding team</span>
         </header>
         <ul class="vx-person-list">
-          <li>Website and product interface design and build</li>
-          <li>Interactive Living Wave front end (SVG, vanilla JavaScript)</li>
-          <li>Responsive layouts for mobile, tablet and desktop</li>
-          <li>Accessibility and front-end performance</li>
+          <li>Wave timeline interface and Deep Mode design system</li>
+          <li>Dashboard and landing page front end</li>
+          <li>Accessible, responsive layouts</li>
         </ul>
         <div class="vx-socials" role="group" aria-label="Victor links">
           <a class="vx-social" href="https://github.com/" target="_blank" rel="noopener noreferrer" hidden data-todo="github"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span><span class="sr-only"> (opens in a new tab)</span></a>
@@ -1183,7 +1184,7 @@
         <div class="investor-card-4">
           <h3 class="investor-subheading">How to get involved</h3>
           <ol class="investor-list">
-            <li>Review the live proof of concept at <strong>vantage-tawny-rho.vercel.app</strong>.</li>
+            <li>Request access to the password-protected proof of concept; Dennis will send the password.</li>
             <li>Join a technical walkthrough of the architecture with Kingsley Nwabueze Jide, our AI Engineer.</li>
             <li>Go through the 4-phase roadmap and the 90-day Phase 1 targets with Dennis.</li>
             <li>Discuss the round, the terms, and how your capital and network can accelerate the build.</li>
@@ -1197,9 +1198,10 @@
             <div class="investor-box-5">Reach Dennis directly • Confidential Investor Outreach</div>
           </div>
           <div class="investor-actions">
-            <a href="https://vantage-tawny-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="investor-link-button">View Live POC &#8599;</a>
-            <button type="button" onclick="openContactModal(this)" class="investor-button">Request Investor Access &rarr;</button>
+            <a href="https://vantage-tawny-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="investor-link-button">View Live POC&nbsp;&#8599;</a>
+            <button type="button" onclick="openContactModal(this)" class="investor-button">Request Investor Access&nbsp;&rarr;</button>
           </div>
+          <p class="poc-note">The proof of concept is password-protected. Request access and Dennis will send the password.</p>
         </div>
 
       </div>
@@ -1285,7 +1287,10 @@
         <div class="honeypot" aria-hidden="true">
           <label for="leadWebsite">Leave this field empty</label>
           <input id="leadWebsite" name="_honey" type="text" tabindex="-1" autocomplete="off">
+        </div><div class="form-consent">
+          <label><input type="checkbox" name="consent" required> I agree to VANTAGE storing these details so Dennis can reply to me.</label>
         </div>
+        <p class="form-privacy">We use your details only to respond to this request and do not share them. Full privacy notice: [link to be added].</p>
         <button type="submit" class="modal-button-2">
           Submit Introduction
         </button>
