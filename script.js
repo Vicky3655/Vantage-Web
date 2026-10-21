@@ -14,9 +14,9 @@ const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: r
 const milestonesData = [
   { id: 0, title: "Legal & CAC Registration", status: "DONE (Wk 0)", progress: 100, conf: 99, notes: "CAC completed in Port Harcourt, Nigeria." },
   { id: 1, title: "Brand Identity & Architecture", status: "DONE (Wk 2)", progress: 100, conf: 98, notes: "Deep Mode aesthetic & typography established." },
-  { id: 2, title: "Engine MVP & POC Wave", status: "LIVE (Wk 8)", progress: 75, conf: 87, notes: "picadashboard.netlify.app active and tested." },
+  { id: 2, title: "Wave MVP", status: "LIVE (Wk 8)", progress: 75, conf: 87, notes: "POC deployed (password-protected, access on request)." },
   { id: 3, title: "Global Beta Launch", status: "PLANNED (Q3)", progress: 25, conf: 67, notes: "Original target. High engineering contention flagged." },
-  { id: 4, title: "Series A Fundraise", status: "HORIZON (Q4)", progress: 5, conf: 41, notes: "Pitch materials queued. Gated on Phase 2 traction proof points." },
+  { id: 4, title: "Funding Round", status: "HORIZON (Q4)", progress: 5, conf: 41, notes: "Pitch materials queued. Gated on Phase 2 traction proof points." },
   { id: 5, title: "RAG Knowledge Layer", status: "NEXT (Wk 14)", progress: 10, conf: 58, notes: "Domain knowledge base scoped. Scheduled after the beta feedback loop." }
 ];
 
@@ -43,7 +43,7 @@ function selectNode(index) {
   const aiStatus = document.getElementById('aiStatusText');
 
   if (pillTitle) pillTitle.innerText = data.title;
-  if (pillStatus) pillStatus.innerText = `Status: ${data.status} • Conf: ${data.conf}% • Progress: ${data.progress}%`;
+  if (pillStatus) pillStatus.innerText = `Status: ${data.status} • Sample conf: ${data.conf}% • Progress: ${data.progress}%`;
   if (aiStatus) aiStatus.innerText = `Interrogating node: "${data.title}" -> ${data.notes}`;
 
   centerNodeInWave(index);
@@ -343,6 +343,12 @@ async function handleLeadSubmit(e) {
 
   errorBox.classList.remove('is-visible');
   if (form.elements._honey.value) { showLeadSuccess(form, feedback); return; }   // spam trap: people never fill it
+  if (!form.elements.consent || !form.elements.consent.checked) {
+    errorBox.textContent = 'Please tick the consent box so we can store your details and reply.';
+    errorBox.classList.add('is-visible');
+    if (form.elements.consent) form.elements.consent.focus();
+    return;
+  }
   if (!isValidEmail(DENNIS_EMAIL)) { showLeadError(errorBox, lead); return; }
 
   const idleLabel = submitBtn.textContent;
@@ -359,7 +365,9 @@ async function handleLeadSubmit(e) {
         name: lead.name,
         email: lead.email,
         role: lead.role,
-        message: lead.note,
+                message: lead.note,
+        consent: 'yes',
+
         _replyto: lead.email,
         _subject: `VANTAGE investor enquiry from ${lead.name}`,
         _template: 'table',
