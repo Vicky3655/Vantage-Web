@@ -1,27 +1,4 @@
-/* ==========================================================================
-   VANTAGE — styles.css   (plain CSS: no Tailwind, no build step)
 
-   How this file is organised
-   1. RESET            Normalises browser defaults so every browser starts equal.
-   2. SHARED STYLES    Colours, glass panels, slider, scrollbar, focus rules, menu, wave,
-                       milestone cards and modal panel (your original custom CSS).
-   3. PAGE EXTRAS      Smooth scrolling and the text-selection colour.
-   4. CLASSES          One block per class used in index.html, grouped by page section.
-                       A block lists how that class looks. The @media blocks right below
-                       it change the look on wider screens:
-                         min-width 640px = tablet+, 768px = large tablet+,
-                         1024px = laptop+, 1900px = very wide screens.
-                       :hover / :focus blocks describe the mouse and keyboard states.
-                       A selector like  > :not([hidden]) ~ :not([hidden])  means "every child
-                       except the first" (used for gaps and divider lines between stacked items).
-   5. STATES           Classes that script.js switches on and off (is-open, is-active ...).
-   6. KEYFRAMES        The animations (pulse, ping, spin, float).
-   ========================================================================== */
-
-/* ==========================================================================
-   1. RESET
-   Browser-default clean-up (margins, box-sizing, button/list/table defaults).
-   ========================================================================== */
 
 *,
 ::before,
@@ -239,7 +216,7 @@ video {
   --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --cyan-glow: rgba(0, 242, 254, 0.45);
+  --cyan-glow: rgba(56,189,248, 0.45);
   --amber-glow: rgba(245, 158, 11, 0.4);
   --emerald-glow: rgba(16, 185, 129, 0.4);
 }
@@ -250,7 +227,7 @@ body {
   font-family: var(--font-body);
   overflow-x: hidden;
   background-image:
-    radial-gradient(circle at 15% 15%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 15% 15%, rgba(56,189,248, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 85% 65%, rgba(14, 165, 233, 0.04) 0%, transparent 45%),
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
@@ -270,12 +247,12 @@ body {
   background: rgba(10, 22, 48, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  box-shadow: 0 0 35px -10px rgba(0, 242, 254, 0.25);
+  border: 1px solid rgba(56,189,248, 0.3);
+  box-shadow: 0 0 35px -10px rgba(56,189,248, 0.25);
 }
 
 /* Glow text ---------------------------------------------------------------- */
-.glow-text { text-shadow: 0 0 18px rgba(0, 242, 254, 0.5); }
+.glow-text { text-shadow: 0 0 18px rgba(56,189,248, 0.5); }
 .glow-amber-text { text-shadow: 0 0 18px rgba(245, 158, 11, 0.5); }
 
 /* Range slider custom thumb ------------------------------------------------ */
@@ -292,32 +269,32 @@ input[type=range]::-webkit-slider-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #00f2fe;
+  background: #38bdf8;
   cursor: pointer;
-  box-shadow: 0 0 12px #00f2fe;
+  box-shadow: 0 0 12px #38bdf8;
   border: 2px solid #040814;
 }
 input[type=range]::-moz-range-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #00f2fe;
+  background: #38bdf8;
   cursor: pointer;
-  box-shadow: 0 0 12px #00f2fe;
+  box-shadow: 0 0 12px #38bdf8;
   border: 2px solid #040814;
 }
 
 /* Custom scrollbar ---------------------------------------------------------- */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #040814; }
-::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #00f2fe; }
+::-webkit-scrollbar-thumb { background: #172d4c; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
 
 /* ==========================================================================
    Accessibility — visible keyboard focus + reduced motion
    ========================================================================== */
 :focus-visible {
-  outline: 2px solid #00f2fe;
+  outline: 2px solid #38bdf8;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -354,7 +331,7 @@ input[type=range]::-moz-range-thumb {
 #mobileMenuBtn[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 .nav-link { position: relative; transition: color 0.2s ease; }
-.nav-link.is-active { color: #22d3ee; }
+.nav-link.is-active { color: #38bdf8; }
 .nav-link.is-active::after {
   content: '';
   position: absolute;
@@ -363,7 +340,7 @@ input[type=range]::-moz-range-thumb {
   bottom: -6px;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #00f2fe, transparent);
+  background: linear-gradient(90deg, #38bdf8, transparent);
 }
 
 /* ==========================================================================
@@ -403,7 +380,7 @@ input[type=range]::-moz-range-thumb {
 [data-node-index] { cursor: pointer; }
 
 .is-focused-node {
-  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.65));
+  filter: drop-shadow(0 0 10px rgba(56,189,248, 0.65));
 }
 
 .milestone-card {
@@ -522,7 +499,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .ping-dot {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   border-radius: 9999px;
-  background-color: #22d3ee;
+  background-color: #38bdf8;
 }
 /* Centred content column, max 1152px */
 .page-container {
@@ -589,7 +566,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 /* Standard section spacing */
 .page-section {
@@ -605,17 +582,17 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .pillars-text {
-  color: #22d3ee;
+  color: #38bdf8;
 }
 /* Bold cyan label on its own line */
 .highlight-cyan-block {
   margin-bottom: 0.25rem;
   display: block;
   font-weight: 700;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .pillars-text-5 {
   color: #38bdf8;
@@ -623,7 +600,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 /* Bold cyan emphasis */
 .highlight-cyan {
   font-weight: 700;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 /* Centred content column, max 1024px */
 .page-container-narrow {
@@ -681,7 +658,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   left: 0.5rem;
   z-index: 100;
   border-radius: 0.5rem;
-  background-color: #22d3ee;
+  background-color: #38bdf8;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -689,7 +666,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
-  color: #020617;
+  color: #040b19;
 }
 
 /* ===== ANNOUNCEMENT BAR ===== */
@@ -715,7 +692,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   line-height: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 
 .announcement-row {
@@ -723,7 +700,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   align-items: center;
   border-radius: 9999px;
   border-width: 1px;
-  border-color: rgba(34, 211, 238, 0.3);
+  border-color: rgba(56,189,248, 0.3);
   background-color: rgba(6, 182, 212, 0.2);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -731,7 +708,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   padding-bottom: 0.125rem;
   font-size: 10px;
   font-weight: 600;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 
 .announcement-link {
@@ -795,7 +772,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-family: var(--font-body);
   font-size: 10px;
   text-transform: uppercase;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 
 @media (min-width: 640px) {
@@ -826,7 +803,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   transition-duration: 150ms;
 }
 .desktop-nav-link:hover {
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .header-row-3 {
   display: flex;
@@ -845,7 +822,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   border-radius: 0.5rem;
   border-width: 1px;
   border-color: rgba(51, 65, 85, 0.6);
-  background-color: rgba(15, 23, 42, 0.8);
+  background-color: rgba(7,17,36, 0.8);
   padding-left: 0.875rem;
   padding-right: 0.875rem;
   padding-top: 0.5rem;
@@ -860,7 +837,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .header-link:hover {
   border-color: rgba(6, 182, 212, 0.4);
-  background-color: #1e293b;
+  background-color: #172d4c;
 }
 @media (min-width: 640px) {
   .header-link {
@@ -873,7 +850,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   gap: 0.5rem;
   white-space: nowrap;
   border-radius: 0.5rem;
-  background-image: linear-gradient(to right, #06b6d4, #0284c7);
+  background-image: linear-gradient(to right, #38bdf8, #0284c7);
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -882,14 +859,14 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
-  color: #020617;
-  box-shadow: 0 0 20px rgba(0,242,254,0.35);
+  color: #040b19;
+  box-shadow: 0 0 20px rgba(56,189,248,0.35);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 .header-link-2:hover {
-  background-image: linear-gradient(to right, #22d3ee, #0ea5e9);
+  background-image: linear-gradient(to right, #38bdf8, #0ea5e9);
 }
 @media (min-width: 640px) {
   .header-link-2 {
@@ -924,7 +901,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   display: block;
   height: 1.5px;
   width: 1rem;
-  background-color: #67e8f9;
+  background-color: #7dd3fc;
 }
 @media (min-width: 1900px) {
   .header-box {
@@ -968,7 +945,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .mobile-nav-link:hover {
   background-color: rgba(30, 41, 59, 0.6);
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .header-link-3 {
   display: block;
@@ -984,7 +961,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .header-link-3:hover {
   background-color: rgba(30, 41, 59, 0.6);
-  color: #22d3ee;
+  color: #38bdf8;
 }
 @media (min-width: 640px) {
   .header-link-3 {
@@ -1049,15 +1026,15 @@ body *::selection {                  /* colour of text you highlight with the mo
   row-gap: 0.25rem;
   border-radius: 1rem;
   border-width: 1px;
-  border-color: rgba(34, 211, 238, 0.3);
+  border-color: rgba(56,189,248, 0.3);
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #67e8f9;
-  box-shadow: 0 0 20px rgba(0,242,254,0.15);
+  color: #7dd3fc;
+  box-shadow: 0 0 20px rgba(56,189,248,0.15);
 }
 
 @media (min-width: 640px) {
@@ -1079,7 +1056,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   height: 1rem;
   width: 1rem;
   flex-shrink: 0;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .hero-text {
@@ -1110,7 +1087,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .hero-title {
@@ -1138,7 +1115,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 
 .hero-text-3 {
-  background-image: linear-gradient(to right, #67e8f9, #38bdf8, #5eead4);
+  background-image: linear-gradient(to right, #7dd3fc, #38bdf8, #5eead4);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -1165,7 +1142,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 
 .hero-strong {
   font-weight: 500;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 
 .hero-column {
@@ -1190,7 +1167,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   justify-content: center;
   gap: 0.5rem;
   border-radius: 0.75rem;
-  background-image: linear-gradient(to right, #22d3ee, #0ea5e9);
+  background-image: linear-gradient(to right, #38bdf8, #0ea5e9);
   padding-left: 1.75rem;
   padding-right: 1.75rem;
   padding-top: 0.875rem;
@@ -1199,8 +1176,8 @@ body *::selection {                  /* colour of text you highlight with the mo
   line-height: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.025em;
-  color: #020617;
-  box-shadow: 0 0 25px rgba(0,242,254,0.4);
+  color: #040b19;
+  box-shadow: 0 0 25px rgba(56,189,248,0.4);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -1208,7 +1185,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 
 .hero-button:hover {
   transform: translateY(-0.125rem);
-  background-image: linear-gradient(to right, #67e8f9, #38bdf8);
+  background-image: linear-gradient(to right, #7dd3fc, #38bdf8);
 }
 
 @media (min-width: 640px) {
@@ -1243,7 +1220,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 
 .hero-link:hover {
-  border-color: rgba(34, 211, 238, 0.4);
+  border-color: rgba(56,189,248, 0.4);
   background-color: rgba(30, 41, 59, 0.6);
 }
 
@@ -1256,7 +1233,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .hero-icon-3 {
   height: 1rem;
   width: 1rem;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .hero-grid {
@@ -1278,7 +1255,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .hero-card {
   border-radius: 1rem;
   border-left-width: 4px;
-  border-left-color: #22d3ee;
+  border-left-color: #38bdf8;
   padding: 1.25rem;
 }
 
@@ -1290,7 +1267,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 /* Heading in the hero cards */
 .hero-card-title {
@@ -1366,7 +1343,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   line-height: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .simulation-heading {
@@ -1498,7 +1475,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .simulation-text-3 {
   display: none;
@@ -1529,8 +1506,8 @@ body *::selection {                  /* colour of text you highlight with the mo
 .stat-box {
   border-radius: 0.5rem;
   border-width: 1px;
-  border-color: #1e293b;
-  background-color: rgba(15, 23, 42, 0.6);
+  border-color: #172d4c;
+  background-color: rgba(7,17,36, 0.6);
   padding-left: 0.375rem;
   padding-right: 0.375rem;
   padding-top: 0.25rem;
@@ -1562,7 +1539,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 @media (min-width: 640px) {
   .simulation-text-4 {
@@ -1636,7 +1613,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   padding-right: 0.625rem;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 /* Small filter button */
 .filter-tag {
@@ -1677,7 +1654,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 9999px;
-  background-color: #22d3ee;
+  background-color: #38bdf8;
 }
 .simulation-dot-3 {
   height: 0.5rem;
@@ -1692,7 +1669,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   margin-bottom: 0.5rem;
   font-family: var(--font-body);
   font-size: 11px;
-  color: rgba(34, 211, 238, 0.7);
+  color: rgba(56,189,248, 0.7);
 }
 @media (min-width: 1024px) {
   .simulation-text-6 {
@@ -1761,7 +1738,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 /* Done-node circle, grows on hover */
 .wave-node-done {
-  fill: #0f172a;
+  fill: #071124;
   stroke: #34d399;
   stroke-width: 2;
   transition-property: transform;
@@ -1797,8 +1774,8 @@ body *::selection {                  /* colour of text you highlight with the mo
   fill: #34d399;
 }
 .simulation-svg-circle-3 {
-  fill: #020617;
-  stroke: #22d3ee;
+  fill: #040b19;
+  stroke: #38bdf8;
   stroke-width: 2;
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1812,7 +1789,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   transform: scale(1.1);
 }
 .simulation-svg-circle-4 {
-  fill: #22d3ee;
+  fill: #38bdf8;
 }
 .simulation-svg-label {
   fill: #fff;
@@ -1828,7 +1805,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   text-transform: uppercase;
 }
 .simulation-svg-circle-5 {
-  fill: #0f172a;
+  fill: #071124;
   stroke: #38bdf8;
   stroke-width: 2;
   transition-property: transform;
@@ -1852,7 +1829,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   text-transform: uppercase;
 }
 .simulation-svg-circle-7 {
-  fill: #0f172a;
+  fill: #071124;
   stroke: #475569;
   stroke-width: 2;
   transition-property: transform;
@@ -1886,7 +1863,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 9px;
 }
 .simulation-svg-circle-9 {
-  fill: #020617;
+  fill: #040b19;
   stroke: #fbbf24;
   stroke-width: 2;
   box-shadow: 0 0 15px #f59e0b;
@@ -1908,7 +1885,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
 }
 .simulation-svg-circle-11 {
-  fill: #020617;
+  fill: #040b19;
   stroke: #fbbf24;
   stroke-width: 2;
 }
@@ -1981,7 +1958,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   color: #cbd5e1;
 }
 .simulation-strong {
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .simulation-text-8 {
   display: none;
@@ -2015,14 +1992,14 @@ body *::selection {                  /* colour of text you highlight with the mo
   gap: 0.5rem;
   border-radius: 0.5rem;
   border-width: 1px;
-  border-color: rgba(34, 211, 238, 0.3);
+  border-color: rgba(56,189,248, 0.3);
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-family: var(--font-body);
   font-size: 10px;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 @media (min-width: 640px) {
   .simulation-row-8 {
@@ -2041,7 +2018,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .simulation-icon-2 {
   animation: spin 1s linear infinite;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .simulation-svg-circle-13 {
   opacity: 0.25;
@@ -2100,7 +2077,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .simulation-field {
   width: 100%;
@@ -2124,7 +2101,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   border-radius: 0.25rem;
   border-width: 1px;
   border-color: #334155;
-  background-color: #1e293b;
+  background-color: #172d4c;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   padding-top: 0.5rem;
@@ -2143,7 +2120,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .simulation-button-3:hover {
   background-color: rgba(8, 145, 178, 0.5);
@@ -2206,7 +2183,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   width: 100%;
   overflow: hidden;
   border-radius: 9999px;
-  background-color: #1e293b;
+  background-color: #172d4c;
 }
 /* Full green progress bar */
 .progress-fill-done {
@@ -2270,7 +2247,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .simulation-button-6 {
   border-radius: 0.5rem;
   border-left-width: 2px;
-  border-left-color: #22d3ee;
+  border-left-color: #38bdf8;
   padding: 0.75rem;
   text-align: left;
 }
@@ -2282,12 +2259,12 @@ body *::selection {                  /* colour of text you highlight with the mo
   padding-right: 0.25rem;
   font-family: var(--font-body);
   font-size: 9px;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .simulation-card-5 {
   height: 100%;
   width: 0px;
-  background-color: #22d3ee;
+  background-color: #38bdf8;
 }
 .simulation-button-7 {
   border-radius: 0.5rem;
@@ -2326,7 +2303,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   position: relative;
   border-top-width: 1px;
   border-color: rgba(8, 51, 68, 0.3);
-  background-color: rgba(2, 6, 23, 0.4);
+  background-color: rgba(4,11,25, 0.4);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -2483,7 +2460,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   overflow: hidden;
   border-radius: 1rem;
   border-left-width: 4px;
-  border-left-color: #22d3ee;
+  border-left-color: #38bdf8;
   padding: 2rem;
 }
 .problem-row-4 {
@@ -2497,7 +2474,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   border-radius: 0.75rem;
   background-color: rgba(6, 182, 212, 0.2);
   padding: 0.5rem;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .problem-icon {
   height: 1.5rem;
@@ -2565,7 +2542,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-family: var(--font-body);
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 /* Pillar heading */
 .pillar-title {
@@ -2614,7 +2591,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-family: var(--font-body);
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .pillars-card-2 {
   overflow-x: auto;
@@ -2662,9 +2639,9 @@ body *::selection {                  /* colour of text you highlight with the mo
   align-items: center;
   justify-content: space-between;
   border-bottom-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-bottom: 0.75rem;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .pillars-dot {
   height: 0.625rem;
@@ -2673,7 +2650,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .pillars-dot {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   border-radius: 9999px;
-  background-color: #22d3ee;
+  background-color: #38bdf8;
 }
 .pillars-text-3 {
   font-size: 10px;
@@ -2690,8 +2667,8 @@ body *::selection {                  /* colour of text you highlight with the mo
 .pillars-card-4 {
   border-radius: 0.5rem;
   border-width: 1px;
-  border-color: #1e293b;
-  background-color: rgba(15, 23, 42, 0.8);
+  border-color: #172d4c;
+  background-color: rgba(7,17,36, 0.8);
   padding: 0.75rem;
   color: #cbd5e1;
 }
@@ -2718,8 +2695,8 @@ body *::selection {                  /* colour of text you highlight with the mo
   width: 100%;
   border-radius: 0.25rem;
   border-width: 1px;
-  border-color: #1e293b;
-  background-color: #020617;
+  border-color: #172d4c;
+  background-color: #040b19;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.375rem;
@@ -2729,14 +2706,14 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .pillars-button {
   border-radius: 0.25rem;
-  background-color: #06b6d4;
+  background-color: #38bdf8;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 11px;
   font-weight: 700;
-  color: #020617;
+  color: #040b19;
 }
 .pillars-box-5 {
   order: 1;
@@ -2855,7 +2832,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .pillars-text-8 {
   display: block;
   font-weight: 700;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 /* Tiny grey note */
 .small-note {
@@ -2908,7 +2885,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #020617;
+  color: #040b19;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -2932,7 +2909,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   position: relative;
   border-radius: 1.5rem;
   border-width: 1px;
-  border-color: rgba(34, 211, 238, 0.3);
+  border-color: rgba(56,189,248, 0.3);
   padding: 2rem;
 }
 
@@ -2953,7 +2930,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .boardroom-subheading {
@@ -3009,7 +2986,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   line-height: 1rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .boardroom-column {
@@ -3021,7 +2998,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   border-radius: 0.75rem;
   border-width: 1px;
   border-color: rgba(51, 65, 85, 0.6);
-  background-color: rgba(15, 23, 42, 0.9);
+  background-color: rgba(7,17,36, 0.9);
   padding: 1rem;
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -3041,7 +3018,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .boardroom-button {
   width: 100%;
   border-radius: 0.5rem;
-  background-color: #22d3ee;
+  background-color: #38bdf8;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.625rem;
@@ -3050,15 +3027,15 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #020617;
-  box-shadow: 0 0 15px #00f2fe;
+  color: #040b19;
+  box-shadow: 0 0 15px #38bdf8;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
 .boardroom-button:hover {
-  background-color: #67e8f9;
+  background-color: #7dd3fc;
 }
 
 @media (min-width: 640px) {
@@ -3096,7 +3073,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .market-card {
   border-radius: 0.75rem;
   border-top-width: 2px;
-  border-top-color: #22d3ee;
+  border-top-color: #38bdf8;
   padding: 1.25rem;
 }
 
@@ -3107,7 +3084,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 /* Medium card heading */
 .card-title {
@@ -3196,7 +3173,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   overflow: hidden;
   border-radius: 1rem;
   border-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 .market-row {
@@ -3206,8 +3183,8 @@ body *::selection {                  /* colour of text you highlight with the mo
   justify-content: space-between;
   gap: 0.5rem;
   border-bottom-width: 1px;
-  border-color: #1e293b;
-  background-color: rgba(15, 23, 42, 0.5);
+  border-color: #172d4c;
+  background-color: rgba(7,17,36, 0.5);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 1rem;
@@ -3220,7 +3197,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .market-text-7 {
   font-size: 11px;
@@ -3238,8 +3215,8 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .market-table-row {
   border-bottom-width: 1px;
-  border-color: #1e293b;
-  background-color: rgba(15, 23, 42, 0.8);
+  border-color: #172d4c;
+  background-color: rgba(7,17,36, 0.8);
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -3257,7 +3234,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   padding-bottom: 0.75rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .market-table-row-2 > :not([hidden]) ~ :not([hidden]) {
   border-top-width: 1px;
@@ -3268,7 +3245,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   color: #cbd5e1;
 }
 .market-table-row-3:hover {
-  background-color: rgba(15, 23, 42, 0.4);
+  background-color: rgba(7,17,36, 0.4);
 }
 /* Table cell: white bold name */
 .table-cell-name {
@@ -3305,7 +3282,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .market-table-row-4 {
   border-left-width: 4px;
-  border-left-color: #22d3ee;
+  border-left-color: #38bdf8;
   background-color: rgba(8, 51, 68, 0.2);
 }
 .market-table-cell {
@@ -3314,7 +3291,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   font-weight: 700;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .market-table-cell-2 {
   padding-top: 0.875rem;
@@ -3322,7 +3299,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   font-weight: 700;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .market-table-cell-3 {
   padding-top: 0.875rem;
@@ -3338,7 +3315,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .architecture-section {
   border-top-width: 1px;
   border-color: rgba(8, 51, 68, 0.4);
-  background-color: rgba(2, 6, 23, 0.6);
+  background-color: rgba(4,11,25, 0.6);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -3359,7 +3336,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .architecture-card {
   border-radius: 1rem;
   border-top-width: 4px;
-  border-top-color: #22d3ee;
+  border-top-color: #38bdf8;
   padding: 1.5rem;
 }
 
@@ -3369,7 +3346,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 /* Architecture layer heading */
 .layer-title {
@@ -3394,7 +3371,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .layer-details-box {
   border-radius: 0.5rem;
-  background-color: rgba(15, 23, 42, 0.9);
+  background-color: rgba(7,17,36, 0.9);
   padding: 0.75rem;
   font-family: var(--font-body);
   font-size: 11px;
@@ -3402,7 +3379,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 .architecture-text {
   display: block;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .architecture-text-2 {
   display: block;
@@ -3463,7 +3440,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   height: 0.625rem;
   width: 0.625rem;
   border-radius: 9999px;
-  background-color: #22d3ee;
+  background-color: #38bdf8;
 }
 .architecture-grid-2 {
   display: grid;
@@ -3483,8 +3460,8 @@ body *::selection {                  /* colour of text you highlight with the mo
 .info-card {
   border-radius: 0.75rem;
   border-width: 1px;
-  border-color: #1e293b;
-  background-color: rgba(15, 23, 42, 0.6);
+  border-color: #172d4c;
+  background-color: rgba(7,17,36, 0.6);
   padding: 1rem;
 }
 /* Grey paragraph, relaxed line spacing */
@@ -3572,7 +3549,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .roadmap-card {
   margin-top: 1.5rem;
   border-top-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-top: 0.75rem;
   font-family: var(--font-body);
   font-size: 10px;
@@ -3598,7 +3575,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .roadmap-card-2 {
   margin-top: 1.5rem;
   border-top-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-top: 0.75rem;
   font-family: var(--font-body);
   font-size: 10px;
@@ -3611,7 +3588,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   justify-content: space-between;
   border-radius: 1rem;
   border-top-width: 4px;
-  border-top-color: #22d3ee;
+  border-top-color: #38bdf8;
   padding: 1.5rem;
 }
 .roadmap-label-3 {
@@ -3619,17 +3596,17 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .roadmap-card-3 {
   margin-top: 1.5rem;
   border-top-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-top: 0.75rem;
   font-family: var(--font-body);
   font-size: 10px;
   font-weight: 600;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .roadmap-column-4 {
   display: flex;
@@ -3650,7 +3627,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .roadmap-card-4 {
   margin-top: 1.5rem;
   border-top-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-top: 0.75rem;
   font-family: var(--font-body);
   font-size: 10px;
@@ -3663,7 +3640,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .investor-section {
   border-top-width: 1px;
   border-color: rgba(22, 78, 99, 0.4);
-  background-color: rgba(2, 6, 23, 0.8);
+  background-color: rgba(4,11,25, 0.8);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -3671,7 +3648,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .investor-card {
   border-radius: 1.5rem;
   border-width: 1px;
-  border-color: rgba(34, 211, 238, 0.4);
+  border-color: rgba(56,189,248, 0.4);
   padding: 1.5rem;
 }
 
@@ -3693,7 +3670,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   justify-content: space-between;
   gap: 1.5rem;
   border-bottom-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-bottom: 2rem;
 }
 
@@ -3713,7 +3690,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .investor-heading {
@@ -3789,7 +3766,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .investor-grid {
   display: grid;
@@ -3812,8 +3789,8 @@ body *::selection {                  /* colour of text you highlight with the mo
   gap: 0.5rem;
   border-radius: 0.25rem;
   border-width: 1px;
-  border-color: #1e293b;
-  background-color: rgba(15, 23, 42, 0.7);
+  border-color: #172d4c;
+  background-color: rgba(7,17,36, 0.7);
   padding: 0.625rem;
 }
 .investor-box-3 {
@@ -3836,7 +3813,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   border-radius: 0.75rem;
   border-width: 1px;
   border-color: rgba(6, 182, 212, 0.3);
-  background-color: rgba(15, 23, 42, 0.8);
+  background-color: rgba(7,17,36, 0.8);
   padding: 1.25rem;
 }
 .investor-row-2 {
@@ -3845,16 +3822,16 @@ body *::selection {                  /* colour of text you highlight with the mo
   align-items: center;
   justify-content: space-between;
   border-bottom-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
-  color: #67e8f9;
+  color: #7dd3fc;
 }
 .investor-text-3 {
   font-size: 10px;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 /* Spaced list of grey items */
 .checklist > :not([hidden]) ~ :not([hidden]) {
@@ -3874,7 +3851,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   border-radius: 0.75rem;
   border-width: 1px;
   border-color: rgba(14, 165, 233, 0.3);
-  background-color: rgba(15, 23, 42, 0.8);
+  background-color: rgba(7,17,36, 0.8);
   padding: 1.25rem;
 }
 .investor-row-3 {
@@ -3883,7 +3860,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   align-items: center;
   justify-content: space-between;
   border-bottom-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -3909,7 +3886,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 .investor-list {
   list-style-position: inside;
@@ -3930,7 +3907,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   justify-content: space-between;
   gap: 1rem;
   border-top-width: 1px;
-  border-color: #1e293b;
+  border-color: #172d4c;
   padding-top: 2rem;
 }
 @media (min-width: 640px) {
@@ -3953,7 +3930,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .investor-button {
   width: 100%;
   border-radius: 0.75rem;
-  background-image: linear-gradient(to right, #22d3ee, #0ea5e9);
+  background-image: linear-gradient(to right, #38bdf8, #0ea5e9);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
@@ -3964,14 +3941,14 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #020617;
-  box-shadow: 0 0 20px rgba(0,242,254,0.4);
+  color: #040b19;
+  box-shadow: 0 0 20px rgba(56,189,248,0.4);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 .investor-button:hover {
-  background-image: linear-gradient(to right, #67e8f9, #38bdf8);
+  background-image: linear-gradient(to right, #7dd3fc, #38bdf8);
 }
 @media (min-width: 640px) {
   .investor-button {
@@ -4013,7 +3990,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .pitch-box-3 {
@@ -4044,7 +4021,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 .footer-footer {
   border-top-width: 1px;
   border-color: rgba(30, 41, 59, 0.8);
-  background-color: #020617;
+  background-color: #040b19;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   font-family: var(--font-body);
@@ -4090,7 +4067,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 
 .footer-link:hover {
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 /* ===== BACK-TO-TOP BUTTON ===== */
@@ -4106,7 +4083,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  color: #67e8f9;
+  color: #7dd3fc;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -4189,19 +4166,19 @@ body *::selection {                  /* colour of text you highlight with the mo
   border-radius: 0.5rem;
   border-width: 1px;
   border-color: #334155;
-  background-color: #0f172a;
+  background-color: #071124;
   padding: 0.625rem;
   color: #ffffff;
 }
 .form-field:focus {
-  border-color: #22d3ee;
+  border-color: #38bdf8;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 .modal-button-2 {
   width: 100%;
   border-radius: 0.5rem;
-  background-image: linear-gradient(to right, #22d3ee, #0ea5e9);
+  background-image: linear-gradient(to right, #38bdf8, #0ea5e9);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 0.75rem;
@@ -4209,14 +4186,14 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #020617;
+  color: #040b19;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 .modal-button-2:hover {
-  background-image: linear-gradient(to right, #67e8f9, #38bdf8);
+  background-image: linear-gradient(to right, #7dd3fc, #38bdf8);
 }
 /* Changed by script.js */
 .form-feedback {
@@ -4267,8 +4244,8 @@ body *::selection {                  /* colour of text you highlight with the mo
   font-size: 2.25rem;
   line-height: 1;
   font-weight: 700;
-  color: #22d3ee;
-  text-shadow: 0 0 18px rgba(0, 242, 254, 0.5);
+  color: #38bdf8;
+  text-shadow: 0 0 18px rgba(56,189,248, 0.5);
 }
 
 .investor-stat-label {
@@ -4296,10 +4273,10 @@ body *::selection {                  /* colour of text you highlight with the mo
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
-  border: 1px solid #1e293b;
-  border-top: 3px solid #22d3ee;
+  border: 1px solid #172d4c;
+  border-top: 3px solid #38bdf8;
   border-radius: 0.75rem;
-  background-color: rgba(15, 23, 42, 0.8);
+  background-color: rgba(7,17,36, 0.8);
   padding: 1.25rem;
 }
 
@@ -4337,7 +4314,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(34, 211, 238, 0.5);
+  border: 1px solid rgba(56,189,248, 0.5);
   border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
   font-size: 0.75rem;
@@ -4346,12 +4323,12 @@ body *::selection {                  /* colour of text you highlight with the mo
   text-transform: uppercase;
   letter-spacing: 0.05em;
   white-space: nowrap;
-  color: #67e8f9;
+  color: #7dd3fc;
   transition: background-color 150ms, color 150ms;
 }
 
 .investor-link-button:hover {
-  background-color: rgba(34, 211, 238, 0.12);
+  background-color: rgba(56,189,248, 0.12);
   color: #ffffff;
 }
 
@@ -4368,7 +4345,7 @@ body *::selection {                  /* colour of text you highlight with the mo
 }
 
 .form-error a {
-  color: #67e8f9;
+  color: #7dd3fc;
   text-decoration: underline;
 }
 
@@ -4443,7 +4420,7 @@ body *::selection {                  /* colour of text you highlight with the mo
   }
 }
 /* ==== VANTAGE design tokens + redesigned hero (loaded last) ==== */
-:root{--bg:#070B14;--surface:#0D1422;--panel:#121C2D;--text:#F4F7FC;--muted:#A4B0C3;--cyan:#45D9F4;--blue:#7188FF;--amber:#F4B65F;--green:#43D6A0;--line:rgba(164,176,195,.16);--gutter:clamp(1rem,4vw,2.5rem)}
+:root{--bg:#040b19;--surface:#071124;--panel:#0b1a33;--text:#f8fafc;--muted:#8da2c0;--dim:#496991;--cyan:#38bdf8;--blue:#93c5fd;--amber:#F4B65F;--green:#43D6A0;--line:#172d4c;--gutter:clamp(1rem,4vw,2.5rem);--display:"Syne","Space Grotesk",system-ui,sans-serif}
 body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .vx-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(1.5rem,4vw,4rem);align-items:center;max-width:1240px;margin:0 auto;padding:clamp(5rem,10vw,8rem) var(--gutter) 2rem}
@@ -4455,7 +4432,7 @@ body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tex
 .vx-secondary{min-height:48px;display:inline-flex;align-items:center;padding:.8rem 1.25rem;border:1px solid var(--line);border-radius:.75rem;color:var(--text);text-decoration:none}
 .vx-secondary:hover{border-color:var(--cyan)}
 .vx-note{color:var(--muted);font-size:.85rem;margin:1.25rem 0 0}
-.vx-preview{margin:0;background:linear-gradient(160deg,var(--panel),var(--surface));border:1px solid var(--line);border-radius:1rem;padding:1rem;box-shadow:0 0 60px rgba(69,217,244,.08)}
+.vx-preview{margin:0;background:linear-gradient(160deg,var(--panel),var(--surface));border:1px solid var(--line);border-radius:1rem;padding:1rem;box-shadow:0 0 60px rgba(56,189,248,.08)}
 .vx-preview svg{width:100%;height:auto;display:block}
 .vx-preview-bar{display:flex;justify-content:space-between;align-items:center;font:500 .85rem "Space Grotesk",sans-serif;color:var(--muted);margin-bottom:.5rem}
 .vx-chip{font:500 .7rem "JetBrains Mono",monospace;padding:.2rem .5rem;border-radius:999px;border:1px solid var(--line)}
@@ -4549,27 +4526,25 @@ body{overflow-x:hidden}
 
 /* ==== Effects layer: floating pill nav, glow, spotlight cards, reveals ==== */
 .vx-hero{position:relative;isolation:isolate}
-.vx-hero::before{content:"";position:absolute;inset:-10% -5% auto;height:90%;z-index:-1;pointer-events:none;
-  background:radial-gradient(60% 55% at 70% 30%,rgba(69,217,244,.16),transparent 70%),radial-gradient(45% 45% at 25% 10%,rgba(113,136,255,.14),transparent 70%)}
 .vx-hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;
   -webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 75%);mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 75%)}
-.vx-title{background:linear-gradient(180deg,#fff 30%,#A4B0C3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.vx-title{background:linear-gradient(180deg,#fff 30%,#8da2c0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .vx-cta .hero-button,.vx-secondary{border-radius:999px}
 .vx-cta .hero-button::after{content:"\2192" / "";display:inline-block;margin-left:.6rem;transition:transform .25s ease}
 .vx-cta .hero-button:hover::after{transform:translateX(4px)}
 .vx-secondary{backdrop-filter:blur(8px);transition:border-color .2s,background .2s}
-.vx-secondary:hover{background:rgba(69,217,244,.08)}
-.vx-eyebrow::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--cyan);margin-right:.6rem;box-shadow:0 0 0 4px rgba(69,217,244,.15)}
+.vx-secondary:hover{background:rgba(56,189,248,.08)}
+.vx-eyebrow::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--cyan);margin-right:.6rem;box-shadow:0 0 0 4px rgba(56,189,248,.15)}
 
 /* process connector fills on reveal */
 .vx-steps li::after{content:"";position:absolute;top:-2px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .9s ease}
 .vx-steps li:nth-child(3)::after{background:linear-gradient(90deg,var(--blue),var(--amber))}.vx-steps li:nth-child(4)::after{background:linear-gradient(90deg,var(--amber),var(--green))}
 .vx-steps li.vx-in::after,html:not(.vx-fx) .vx-steps li::after{transform:scaleX(1)}
 
-@media(min-width:1200px){
+@media(min-width:1280px){
   .header-header{margin:.75rem auto 0;width:calc(100% - 2rem);max-width:1240px;border-radius:999px;top:.75rem;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
-  .header-header.is-scrolled{background:rgba(7,11,20,.78);backdrop-filter:blur(14px);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+  .header-header.is-scrolled{background:rgba(4,11,25,.78);backdrop-filter:blur(14px);box-shadow:0 10px 40px rgba(0,0,0,.35)}
 }
 
 @media(prefers-reduced-motion:no-preference){
@@ -4594,7 +4569,7 @@ body{overflow-x:hidden}
 /* ==== Header: floating pill nav (logo | centred links | outlined CTA) ==== */
 .vx-logo{text-decoration:none;font:500 1.5rem/1 "Space Grotesk",sans-serif;letter-spacing:.02em;color:var(--text);white-space:nowrap}
 .vx-logo-a{color:var(--cyan)}
-@media(min-width:1200px){
+@media(min-width:1280px){
   .header-header.glass-panel{width:calc(100% - 2rem);max-width:1240px;margin:.75rem auto 0;top:.75rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:linear-gradient(180deg,rgba(15,20,32,.92),rgba(8,11,18,.94));backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
   .header-header .page-container-wide{max-width:none;padding:0 .75rem 0 1.75rem}
   .header-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;flex-wrap:nowrap;min-height:4rem;padding:0;row-gap:0}
@@ -4605,12 +4580,12 @@ body{overflow-x:hidden}
   .header-row-3{justify-self:end;display:flex;align-items:center;gap:.75rem}
   .header-row-3 .header-link,.header-row-3 .header-button,.mobile-menu,.header-text-2{display:none}
   .header-link-2{background:transparent;box-shadow:none;color:var(--text);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:.7rem 1.6rem;min-height:44px;font:400 1rem/1 Inter,system-ui,sans-serif;text-decoration:none;transition:border-color .2s,background .2s}
-  .header-link-2:hover{background:rgba(69,217,244,.08);border-color:var(--cyan);transform:none}
+  .header-link-2:hover{background:rgba(56,189,248,.08);border-color:var(--cyan);transform:none}
   .header-link-2 .hide-on-mobile{display:inline}
 }
-@media(max-width:1199px){.vx-menu-poc{display:block}}
-@media(min-width:1200px){.vx-menu-poc{display:none}}
-@media(min-width:1200px){
+@media(max-width:1279px){.vx-menu-poc{display:block}}
+@media(min-width:1280px){.vx-menu-poc{display:none}}
+@media(min-width:1280px){
   .header-header .page-container-wide{padding:0 .75rem}
   .vx-logo{margin-left:1rem}
   .header-nav .nav-link::after,.header-nav .nav-link::before{display:none!important}
@@ -4717,15 +4692,146 @@ body{overflow-x:hidden}
 @media(max-width:767px){.header-link{display:inline-grid;grid-auto-flow:column;align-items:center;gap:.5rem}}
 
 /* ==== Buttons: one solid colour, no gradient or glow ==== */
-.hero-button,.header-link-2,.pillars-button-2,.investor-button,.modal-button-2{background:var(--cyan);background-image:none;color:#04121A;box-shadow:none}
-.hero-button:hover,.header-link-2:hover,.pillars-button-2:hover,.investor-button:hover,.modal-button-2:hover{background:#7BE6F8;background-image:none;box-shadow:none}
-@media(min-width:1200px){
+.hero-button,.header-link-2,.pillars-button-2,.investor-button,.modal-button-2{background:var(--cyan);background-image:none;color:#04101f;box-shadow:none}
+.hero-button:hover,.header-link-2:hover,.pillars-button-2:hover,.investor-button:hover,.modal-button-2:hover{background:#7dd3fc;background-image:none;box-shadow:none}
+@media(min-width:1280px){
   /* keep the outlined pill look for the header CTA on the desktop nav */
   .header-link-2{background:transparent;color:var(--text)}
-  .header-link-2:hover{background:rgba(69,217,244,.08)}
+  .header-link-2:hover{background:rgba(56,189,248,.08)}
 }
 @media(max-width:767px){
   .announcement-bar{display:none}
   .vx-cta .hero-button,.vx-cta .vx-secondary{height:3.25rem;min-height:3.25rem;padding:0 1.25rem;font-size:1rem;line-height:1;box-sizing:border-box}
   .vx-cta .hero-button::after{display:none}
+}
+
+/* ==========================================================================
+   Mobile refinement (<= 767px only). Desktop and tablet rules are untouched.
+   - grid everywhere, content capped so nothing stretches edge to edge
+   - one palette: tokens from :root (navy surfaces, cyan/blue/amber/green)
+   ========================================================================== */
+@media(min-width:768px){.vx-li-text{display:contents}}
+@media(max-width:767px){
+  /* readable column, centred on large phones */
+  .page-container,.vx-wrap,.vx-hero,.vx-pillars,.footer-column{max-width:40rem;margin-inline:auto}
+  main p,main li,main dd,main td{font-family:Inter,system-ui,sans-serif}
+  main p{line-height:1.65}
+  main h2,main h3{color:var(--text);letter-spacing:-.01em}
+
+  /* one card style */
+  .glass-panel:not(.header-header),.glass-panel-glow,.info-card,.investor-stat,.investor-fund,.investor-card-2,.investor-card-3,.investor-card-4,.pillars-card-5,.simulation-card-2,.vx-card,.vx-person,.vx-panel,.vx-preview,.market-table tr{
+    background:linear-gradient(170deg,var(--panel),var(--surface));border:1px solid var(--line);border-radius:.875rem;box-shadow:none}
+  .vx-card-base,.vx-person{border-top-width:3px}
+  .vx-card-base{border-top-color:var(--cyan)}.vx-card-alt{border-top-color:var(--amber)}
+  .investor-stat{justify-items:center;text-align:center;padding:1rem .75rem}
+
+  /* buttons hug a sensible width and align with the text column */
+  .vx-cta .hero-button,.vx-cta .vx-secondary,.vx-board-cta .hero-button,.investor-button{width:100%;max-width:21rem;justify-self:start}
+  .vx-board-cta .vx-note{max-width:30ch}
+  .vx-cta,.vx-board-cta,.investor-actions{justify-items:start}
+
+  /* hero copy rhythm */
+  .vx-lede{max-width:36ch}
+  .vx-note{max-width:34ch}
+  .vx-pillars{gap:1.75rem;padding-block:1.5rem 3rem}
+  .vx-steps{gap:1.75rem}
+
+  /* contact modal: centring with grid */
+  .contact-modal.is-open,.contact-modal[aria-hidden="false"]{display:grid;place-items:center}
+}
+
+/* Hero CTAs side by side on phones (grid, two equal columns) */
+@media(max-width:767px){
+  .vx-cta{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;align-items:stretch;justify-items:stretch}
+  .vx-cta .hero-button,.vx-cta .vx-secondary{width:100%;max-width:none;height:auto;min-height:3.25rem;padding:.6rem .75rem;font-size:.9rem;line-height:1.25;text-align:center;white-space:normal;justify-self:stretch}
+}
+@media(max-width:340px){.vx-cta .hero-button,.vx-cta .vx-secondary{font-size:.82rem;padding-inline:.5rem}}
+
+/* Investor CTAs side by side on phones (grid, two equal columns) */
+@media(max-width:767px){
+  .investor-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;align-items:stretch;justify-items:stretch}
+  .investor-actions .investor-link-button,.investor-actions .investor-button{width:100%;max-width:none;justify-self:stretch;min-height:3.25rem;height:auto;padding:.6rem .6rem;font-size:.75rem;line-height:1.35;text-align:center;white-space:normal;box-sizing:border-box;display:grid;place-items:center}
+}
+@media(max-width:340px){.investor-actions .investor-link-button,.investor-actions .investor-button{font-size:.68rem;padding-inline:.4rem}}
+
+/* ==== Hero grid: full-bleed, two-tier blueprint grid with node markers ==== */
+.hero-section{position:relative;isolation:isolate;overflow:hidden}
+.vx-hero::after{display:none}
+
+
+/* ==== Login-screen identity: Syne display type, sky-blue UI, bolder hero grid ==== */
+.vx-title,.vx-h2,.vx-pillars h2,main h1,main h2,.section-title,.investor-heading{font-family:var(--display);font-weight:800;letter-spacing:-.01em}
+.vx-title{font-size:clamp(2.1rem,4.9vw,3.9rem);line-height:1.04}
+.vx-h2{font-size:clamp(1.55rem,3.2vw,2.35rem);line-height:1.12;max-width:24ch}
+.vx-eyebrow{letter-spacing:.18em;color:var(--cyan)}
+.vx-logo{font-family:var(--display);font-weight:800;letter-spacing:.02em}
+input:focus,textarea:focus,select:focus{border-color:#2884b3;box-shadow:0 0 0 3px rgba(56,189,248,.18)}
+@media(max-width:767px){
+  .vx-title{font-size:clamp(1.7rem,8vw,2.2rem)}
+  .vx-h2{font-size:clamp(1.35rem,6.4vw,1.8rem)}
+  main h2{overflow-wrap:break-word}
+}
+.vx-title{font-size:clamp(2rem,4vw,3.3rem)}
+.vx-lede,.vx-note,.vx-eyebrow{text-shadow:0 0 10px var(--bg),0 0 22px var(--bg)}
+@media(max-width:767px){.vx-title{font-size:clamp(1.7rem,8vw,2.2rem)}}
+
+/* ==== Hero grid (refined): quiet two-tier blueprint, no markers ==== */
+.hero-section::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  --minor:rgba(73,105,145,.20);--major:rgba(56,189,248,.12);--cell:56px;--big:224px;
+  background-image:linear-gradient(var(--major) 1px,transparent 1px),linear-gradient(90deg,var(--major) 1px,transparent 1px),linear-gradient(var(--minor) 1px,transparent 1px),linear-gradient(90deg,var(--minor) 1px,transparent 1px);
+  background-size:var(--big) var(--big),var(--big) var(--big),var(--cell) var(--cell),var(--cell) var(--cell);
+  -webkit-mask-image:radial-gradient(75% 70% at 50% 30%,#000 20%,transparent 100%);mask-image:radial-gradient(75% 70% at 50% 30%,#000 20%,transparent 100%)}
+@media(max-width:767px){.hero-section::before{--cell:40px;--big:160px}}
+
+/* ==== Nav links in Syne, with room to breathe ==== */
+.header-nav .nav-link,.mobile-nav-link,.header-link-2,.header-link,.vx-menu-poc{font-family:var(--display);font-weight:600;letter-spacing:.01em}
+@media(min-width:1280px){
+  .header-nav{font-size:.82rem;gap:clamp(1.5rem,2.4vw,2.5rem)}
+  .header-row{grid-template-columns:minmax(max-content,1fr) auto minmax(max-content,1fr)}
+  .header-link-2{font-size:.85rem;padding:.7rem 1.5rem}
+  .vx-logo{font-size:1.35rem}
+}
+
+/* ==== Hero edges: glow and grid fade out, no visible box edges ==== */
+.hero-section::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(48% 42% at 72% 32%,rgba(56,189,248,.14),transparent 70%),radial-gradient(40% 38% at 22% 20%,rgba(147,197,253,.09),transparent 70%);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 62%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 62%,transparent 100%)}
+.hero-section::before{
+  -webkit-mask-image:radial-gradient(68% 52% at 50% 52%,#000 15%,transparent 100%);mask-image:radial-gradient(68% 52% at 50% 52%,#000 15%,transparent 100%)}
+.header-header.glass-panel{box-shadow:0 14px 36px -18px rgba(0,0,0,.55)}
+
+/* Phone menu: no POC links in the nav, all items on one left edge */
+@media(max-width:767px){
+  .header-row-3 .header-link,.vx-menu-poc{display:none}
+  .mobile-nav-link{text-align:left}
+}
+
+/* ==== Corrections: sample-data labels, POC note, form consent ==== */
+.sample-note{margin:0 0 12px;padding:8px 12px;border:1px dashed rgba(141,162,192,.5);border-radius:8px;font:12px/1.5 "JetBrains Mono",monospace;color:var(--muted)}
+.poc-note,.form-privacy{margin:8px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}
+.form-consent label{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;font-size:13px;line-height:1.5;color:var(--text)}
+.form-consent input{margin-top:3px;accent-color:var(--cyan)}
+.pillars-button[disabled]{opacity:.45;cursor:not-allowed}
+@media(max-width:767px){.modal-card{padding-top:3.5rem}.modal-card .modal-button{top:.6rem;right:.75rem}}
+
+/* Investor CTA (desktop/tablet): note sits on its own line under the text and buttons */
+@media(min-width:768px){
+  .investor-column-2{flex-wrap:wrap;row-gap:.75rem}
+  .investor-column-2 > .poc-note{flex:0 0 100%;margin:.25rem 0 0;max-width:none}
+}
+/* Insight card (phones): icon without the tinted background box */
+@media(max-width:767px){
+  .problem-card-8{background:none;border:0;box-shadow:none;padding:0;width:auto;justify-self:start}
+}
+
+/* Section eyebrows: one green, no dots */
+.vx-eyebrow,.simulation-row,.problem-label,.problem-box,.section-eyebrow,.investor-label,.pitch-box-2{color:var(--green)}
+.vx-eyebrow::before{display:none}
+.simulation-row .ping-dot{display:none}
+
+/* Boardroom CTA (phones): full-width button, balanced two-line label, centred note */
+@media(max-width:767px){
+  .vx-board-cta{justify-items:stretch;gap:.9rem}
+  .vx-board-cta .hero-button{width:100%;max-width:none;justify-self:stretch;min-height:3.5rem;height:auto;padding:.75rem 1.25rem;line-height:1.3;text-align:center;text-wrap:balance}
+  .vx-board-cta .vx-note{max-width:none;margin:0;text-align:center;text-wrap:balance}
 }
