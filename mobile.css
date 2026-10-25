@@ -1,0 +1,436 @@
+/* ==========================================================================
+   VANTAGE: mobile.css
+   Loaded only on screens up to 767px wide (see the <link media="..."> in
+   index.html). Everything phone-specific lives here; styles.css holds the
+   base and desktop styles. Rules in blocks 1-5 were moved here unchanged.
+   ========================================================================== */
+
+/* moved block 1: (max-width:420px) */
+@media(max-width:420px){
+.vx-panels{grid-template-columns:1fr}.vx-cta>*{width:100%;justify-content:center}
+}
+
+/* moved block 2: (max-width:640px) */
+@media(max-width:640px){
+.vx-compare,.vx-steps{grid-template-columns:1fr}.vx-board-cta .hero-button{width:100%}
+}
+
+/* moved block 3: (max-width:640px) */
+@media(max-width:640px){
+  .vx-hero{padding-top:1.75rem;gap:1.5rem}
+  .hero-section{padding-top:0}
+  .vx-title{font-size:clamp(2.1rem,9.5vw,2.6rem)}
+  .vx-preview{padding:.75rem}
+  .header-button,.header-link-2,.announcement-link,.footer-link,.simulation-button,.pillars-button,.pillars-button-2,.branch-toggle-button,.scrubber-button,.vx-secondary{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center}
+  .header-button{width:44px;height:44px}
+  .announcement-link,.footer-link{padding-block:.6rem}
+  input[type=range]{min-height:44px;touch-action:pan-y}
+  .simulation-row-5{flex-wrap:wrap;overflow:visible}
+  .stat-box-label{letter-spacing:0;white-space:normal;line-height:1.2}
+  #aiStatusText,.simulation-text-6{white-space:normal}
+  .modal-card,.modal-panel{max-height:calc(100dvh - 1.5rem);overflow-y:auto;overscroll-behavior:contain}
+  #contactModal input,#contactModal textarea,#contactModal select{font-size:16px;min-height:44px}
+  .vx-wrap{padding-block:2.5rem}
+  .vx-compare .vx-card{padding:1.1rem}
+}
+
+/* moved block 4: (max-width:360px) */
+@media(max-width:360px){
+.vx-eyebrow{font-size:.7rem}.vx-cta .hero-button,.vx-secondary{padding-inline:1rem}
+}
+
+/* moved block 5: (max-width:420px) */
+@media(max-width:420px){
+.header-row .header-link{display:none}
+}
+
+/* moved block 6 */
+  /* stacked flex columns -> grid */
+  .simulation-column,.footer-column,.investor-column,.investor-column-2,.investor-actions,.investor-fund,.investor-stat,.vx-person,.vx-panel,.header-button{display:grid;align-content:start}
+  .header-button{align-content:center;justify-items:center}
+  .vx-person{align-content:stretch;grid-template-rows:auto 1fr auto}
+  /* label + value rows */
+  .milestone-card-header,.vx-preview-bar,.pillars-row-2,.pillars-row-4,.pillars-row-7,.pillars-row-8,.pillars-row-9{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.5rem .75rem}
+  .market-row,.pillars-row-3,.problem-row-4,.simulation-row-3,.simulation-row-4,.vx-cta,.vx-board-cta,.announcement-bar{display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem;justify-items:stretch}
+  .announcement-bar{justify-items:center;text-align:center;gap:.4rem}
+  /* icon + text rows */
+  .step-row,.simulation-row-8,.simulation-row-9{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:.6rem}
+  .simulation-row-9{align-items:center}
+  .row-centered,.simulation-row-7,.footer-row{display:grid;grid-auto-flow:column;grid-auto-columns:max-content;justify-content:start;align-items:center;gap:.5rem .75rem}
+  .simulation-row-7{grid-auto-flow:row;grid-auto-columns:auto}
+  .simulation-row-7 .simulation-text-8{display:none}
+  /* simulation controls */
+  .simulation-row-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.6rem}
+  .simulation-row-2 .branch-toggle-button{grid-column:1/-1}
+  .simulation-row-5{display:grid;grid-template-columns:repeat(auto-fit,minmax(5.6rem,1fr));gap:.5rem;overflow:visible}
+  .simulation-row-5 .vx-filter-status{grid-column:1/-1;margin:0}
+  .simulation-row-6{display:grid;grid-template-columns:repeat(2,max-content);justify-content:start;gap:.5rem 1.25rem}
+  .simulation-row-10{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+  .simulation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+  /* header */
+  .header-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+  .header-row-3{display:grid;grid-auto-flow:column;grid-auto-columns:max-content;align-items:center;gap:.5rem}
+  /* single-label buttons and links centre their text with grid */
+  .header-link-2,.simulation-button,.simulation-button-3,.pillars-button,.pillars-button-2,.branch-toggle-button,.branch-commit-button,.scrubber-button,.vx-secondary,.investor-link-button,.investor-button,.announcement-link,.footer-link{display:inline-grid;place-items:center;text-align:center}
+  .vx-cta .hero-button,.vx-cta .vx-secondary,.vx-board-cta .hero-button{display:grid;place-items:center;width:100%}
+  /* person card header, links */
+  .vx-person-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.5rem .9rem;align-items:center}
+  .vx-person-top .vx-badge{grid-column:2;justify-self:start}
+  .vx-socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr))}
+  .vx-socials:not(:has(a:not([hidden]))){display:none}
+  .vx-social{display:inline-grid;grid-auto-flow:column;justify-content:center;align-items:center}
+  .vx-preview-bar{align-items:center}
+
+  /* market table -> stacked grid cards */
+  .market-table,.market-table tbody,.market-table tr,.market-table td{display:block;width:100%;min-width:0}
+  .market-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .market-table tbody{display:grid;gap:.9rem}
+  .market-table tr{display:grid;grid-template-columns:minmax(0,1fr);gap:.1rem;padding:1rem;border:1px solid var(--line);border-radius:.75rem;background:linear-gradient(170deg,var(--panel),var(--surface))}
+  .market-table td{display:grid;grid-template-columns:6.6rem minmax(0,1fr);gap:.75rem;padding:.55rem 0;border:0;border-top:1px solid var(--line);text-align:left}
+  .market-table td:first-child{grid-template-columns:minmax(0,1fr);border-top:0;padding-top:0;font:600 1.05rem "Space Grotesk",sans-serif}
+  .market-table td:first-child::before{display:none}
+  .market-table td::before{content:attr(data-label);color:var(--muted);font:500 .72rem/1.5 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.04em}
+  .market-box{overflow:visible}
+
+/* moved block 7 */
+  .simulation-column,.footer-column,.investor-column,.investor-column-2,.investor-actions,.investor-fund,.investor-stat,.vx-person,.vx-panel{grid-template-columns:minmax(0,1fr)}
+  .simulation-column > *,.investor-column > *,.investor-column-2 > *{min-width:0}
+
+/* moved block 8 */
+  .row-centered,.footer-row{grid-auto-columns:minmax(0,max-content)}
+  li.row-centered{grid-auto-flow:row;grid-template-columns:auto minmax(0,1fr);align-items:start}
+
+/* moved block 9 */
+.vx-li-text{min-width:0;overflow-wrap:anywhere}
+
+/* moved block 10 */
+  .branch-toggle-button{grid-auto-flow:column;justify-content:center;gap:.5rem}
+  .simulation-row-2 .simulation-button{grid-column:1/-1}
+
+/* moved block 11 */
+  .announcement-row,.header-row-2,.simulation-row,.legend-item,.problem-row,.problem-row-2,.problem-row-3,.pillars-row,.pillars-row-5,.pillars-row-6,.architecture-subheading,.investor-row,.back-to-top-button{display:inline-grid;grid-auto-flow:column;grid-auto-columns:minmax(0,max-content);align-items:center;justify-content:start;gap:.5rem}
+  .back-to-top-button{place-items:center;justify-content:center}
+  .simulation-column-2,.roadmap-column,.roadmap-column-2,.roadmap-column-3,.roadmap-column-4{display:grid;grid-template-columns:minmax(0,1fr);align-content:start}
+  .vx-facts > div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.75rem;align-items:baseline}
+  .vx-compare{grid-template-columns:minmax(0,1fr)}
+  .vx-team{grid-template-columns:minmax(0,1fr)}
+
+/* moved block 12 */
+.header-link{display:inline-grid;grid-auto-flow:column;align-items:center;gap:.5rem}
+
+/* moved block 13 */
+  .announcement-bar{display:none}
+  .vx-cta .hero-button,.vx-cta .vx-secondary{height:3.25rem;min-height:3.25rem;padding:0 1.25rem;font-size:1rem;line-height:1;box-sizing:border-box}
+  .vx-cta .hero-button::after{display:none}
+
+/* moved block 14 */
+  /* readable column, centred on large phones */
+  .page-container,.vx-wrap,.vx-hero,.vx-pillars,.footer-column{max-width:40rem;margin-inline:auto}
+  main p,main li,main dd,main td{font-family:Inter,system-ui,sans-serif}
+  main p{line-height:1.65}
+  main h2,main h3{color:var(--text);letter-spacing:-.01em}
+
+  /* one card style */
+  .glass-panel:not(.header-header),.glass-panel-glow,.info-card,.investor-stat,.investor-fund,.investor-card-2,.investor-card-3,.investor-card-4,.pillars-card-5,.simulation-card-2,.vx-card,.vx-person,.vx-panel,.vx-preview,.market-table tr{
+    background:linear-gradient(170deg,var(--panel),var(--surface));border:1px solid var(--line);border-radius:.875rem;box-shadow:none}
+  .vx-card-base,.vx-person{border-top-width:3px}
+  .vx-card-base{border-top-color:var(--cyan)}.vx-card-alt{border-top-color:var(--amber)}
+  .investor-stat{justify-items:center;text-align:center;padding:1rem .75rem}
+
+  /* buttons hug a sensible width and align with the text column */
+  .vx-cta .hero-button,.vx-cta .vx-secondary,.vx-board-cta .hero-button,.investor-button{width:100%;max-width:21rem;justify-self:start}
+  .vx-board-cta .vx-note{max-width:30ch}
+  .vx-cta,.vx-board-cta,.investor-actions{justify-items:start}
+
+  /* hero copy rhythm */
+  .vx-lede{max-width:36ch}
+  .vx-note{max-width:34ch}
+  .vx-pillars{gap:1.75rem;padding-block:1.5rem 3rem}
+  .vx-steps{gap:1.75rem}
+
+  /* contact modal: centring with grid */
+  .contact-modal.is-open,.contact-modal[aria-hidden="false"]{display:grid;place-items:center}
+
+/* moved block 15 */
+  .vx-cta{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;align-items:stretch;justify-items:stretch}
+  .vx-cta .hero-button,.vx-cta .vx-secondary{width:100%;max-width:none;height:auto;min-height:3.25rem;padding:.6rem .75rem;font-size:.9rem;line-height:1.25;text-align:center;white-space:normal;justify-self:stretch}
+
+/* moved block 16: (max-width:340px) */
+@media(max-width:340px){
+.vx-cta .hero-button,.vx-cta .vx-secondary{font-size:.82rem;padding-inline:.5rem}
+}
+
+/* moved block 17 */
+  .investor-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;align-items:stretch;justify-items:stretch}
+  .investor-actions .investor-link-button,.investor-actions .investor-button{width:100%;max-width:none;justify-self:stretch;min-height:3.25rem;height:auto;padding:.6rem .6rem;font-size:.75rem;line-height:1.35;text-align:center;white-space:normal;box-sizing:border-box;display:grid;place-items:center}
+
+/* moved block 18: (max-width:340px) */
+@media(max-width:340px){
+.investor-actions .investor-link-button,.investor-actions .investor-button{font-size:.68rem;padding-inline:.4rem}
+}
+
+/* moved block 19 */
+  .vx-title{font-size:clamp(1.7rem,8vw,2.2rem)}
+  .vx-h2{font-size:clamp(1.35rem,6.4vw,1.8rem)}
+  main h2{overflow-wrap:break-word}
+
+/* moved block 20 */
+.vx-title{font-size:clamp(1.7rem,8vw,2.2rem)}
+
+/* moved block 21 */
+.hero-section::before{--cell:40px;--big:160px}
+
+/* moved block 22 */
+  .header-row-3 .header-link,.vx-menu-poc{display:none}
+  .mobile-nav-link{text-align:left}
+
+/* moved block 23 */
+.modal-card{padding-top:3.5rem}.modal-card .modal-button{top:.6rem;right:.75rem}
+
+/* moved block 24 */
+  .problem-card-8{background:none;border:0;box-shadow:none;padding:0;width:auto;justify-self:start}
+
+/* moved block 25 */
+  .vx-board-cta{justify-items:stretch;gap:.9rem}
+  .vx-board-cta .hero-button{width:100%;max-width:none;justify-self:stretch;min-height:3.5rem;height:auto;padding:.75rem 1.25rem;line-height:1.3;text-align:center;text-wrap:balance}
+  .vx-board-cta .vx-note{max-width:none;margin:0;text-align:center;text-wrap:balance}
+
+/* ==========================================================================
+   NEW MOBILE DESIGN (from the reference pictures). Phones only: this file
+   is not loaded at 768px and wider. Layout is grid throughout.
+   Sections: 1 icons, 2 top bar and header, 3 hero, 4 simulation, 5 investors
+   ========================================================================== */
+
+/* 1. Icons: drawn with CSS masks, so they take the colour of the text ------ */
+:root{
+  --i-globe:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18'/%3E%3C/svg%3E");
+  --i-eye:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");
+  --i-lock:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='11' width='14' height='9' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E");
+  --i-pulse:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12h5l2-7 4 14 2-7h7'/%3E%3C/svg%3E");
+  --i-branch:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='6' cy='5' r='2'/%3E%3Ccircle cx='6' cy='19' r='2'/%3E%3Ccircle cx='18' cy='8' r='2'/%3E%3Cpath d='M6 7v10M18 10v1a4 4 0 0 1-4 4H9'/%3E%3C/svg%3E");
+  --i-spark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'%3E%3Cpath d='M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z'/%3E%3C/svg%3E");
+  --i-bars:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5 20v-8M12 20V5M19 20v-11'/%3E%3C/svg%3E");
+  --i-loop:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 12a8 8 0 1 1-3-6.2'/%3E%3Cpath d='M20 4v4h-4'/%3E%3C/svg%3E");
+  --i-chevc:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10.5'/%3E%3Cpath d='M10 8l4 4-4 4'/%3E%3C/svg%3E");
+  --i-chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E");
+}
+.vx-cta .hero-button::before,.vx-cta .vx-secondary::before,.investor-link-button::before,.investor-button::before,
+.vx-panel::before,.vx-insight::before,.vx-pillars h2::before,.branch-toggle-button::before,.branch-toggle-button::after{
+  content:"";width:1.15rem;height:1.15rem;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+
+/* 2. Top strip and header ---------------------------------------------- */
+.announcement-bar{display:grid;justify-items:center;padding:.5rem 1rem;border-bottom:1px solid var(--line);background:rgba(7,17,36,.6)}
+.announcement-bar > *:not(.announcement-row),.announcement-link{display:none}
+.announcement-row{background:none;border:0;padding:0;color:var(--cyan);font:500 .75rem "JetBrains Mono",monospace;letter-spacing:.22em}
+.header-header.glass-panel{position:sticky;top:.5rem;margin:.6rem 1rem 0;width:auto;border:1px solid var(--line);border-radius:1.1rem;background:linear-gradient(170deg,var(--panel),var(--surface));box-shadow:0 14px 30px -18px rgba(0,0,0,.6)}
+.header-header .header-link-2{display:none}
+.vx-logo{font-size:18px}
+.header-button{border-color:transparent;background:none}
+
+/* 3. Hero ---------------------------------------------------------------- */
+.vx-title{font-size:clamp(1.9rem,8.6vw,2.4rem);line-height:1.08}
+.vx-accent{background:none;color:var(--cyan);-webkit-text-fill-color:var(--cyan)}
+.vx-cta .hero-button,.vx-cta .vx-secondary{grid-auto-flow:column;justify-content:center;align-items:center;gap:.5rem}
+.vx-cta .hero-button{--i:var(--i-globe)}
+.vx-cta .vx-secondary{--i:var(--i-eye);border-color:rgba(56,189,248,.35)}
+.vx-cta .hero-button::before,.vx-cta .vx-secondary::before{flex:none}
+.vx-preview{padding:1rem;border-color:rgba(56,189,248,.28)}
+.vx-preview-bar{font:500 .75rem "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.vx-panels{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.vx-panel{grid-template-columns:auto minmax(0,1fr);column-gap:.6rem;row-gap:.25rem;align-items:start;padding:.75rem}
+.vx-panel::before{grid-row:1/4;margin-top:.1rem}
+.vx-panel:nth-child(1){--i:var(--i-pulse);color:var(--cyan)}
+.vx-panel:nth-child(2){--i:var(--i-branch);color:var(--amber)}
+.vx-panel > *{grid-column:2;color:var(--text)}
+.vx-panel .vx-k{color:currentColor;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem}
+.vx-panel:nth-child(1) .vx-k{color:var(--cyan)}.vx-panel:nth-child(2) .vx-k{color:var(--amber)}
+.vx-insight{position:relative;margin-top:.75rem;padding:.8rem .9rem .8rem 2.6rem;border:1px solid var(--line);border-radius:.75rem;--i:var(--i-spark);color:var(--muted)}
+.vx-insight::before{position:absolute;left:.9rem;top:.85rem;color:var(--cyan)}
+.vx-pillars{grid-template-columns:minmax(0,1fr);gap:.7rem;padding-block:1.25rem 2.5rem}
+.vx-pillars article{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:.8rem;row-gap:.3rem;align-items:start;padding:.9rem 1rem;border:1px solid var(--line);border-top-width:2px;border-radius:.875rem;background:linear-gradient(170deg,var(--panel),var(--surface))}
+.vx-pillars h2{display:grid;grid-auto-flow:column;justify-content:start;align-items:center;gap:.6rem;grid-column:1/-1;font:700 .85rem "Space Grotesk",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:0}
+.vx-pillars h2::before{width:1.3rem;height:1.3rem;color:var(--cyan)}
+.vx-pillars article:nth-child(1) h2{--i:var(--i-eye)}
+.vx-pillars article:nth-child(2) h2{--i:var(--i-bars);}.vx-pillars article:nth-child(2) h2::before{color:var(--blue)}
+.vx-pillars article:nth-child(3) h2{--i:var(--i-loop);}.vx-pillars article:nth-child(3) h2::before{color:var(--amber)}
+.vx-pillars p{grid-column:1/-1;max-width:none;font-size:.9rem;line-height:1.55}
+
+/* 4. Simulation ---------------------------------------------------------- */
+.branch-toggle-button{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.7rem;text-align:left;padding:.7rem .8rem .7rem 1rem;border:1px solid rgba(244,182,95,.55);border-radius:999px;background:rgba(244,182,95,.1);color:var(--amber);--i:var(--i-branch);font-size:.85rem}
+.branch-toggle-button .amber-dot{display:none}
+.branch-toggle-button::after{--i:var(--i-chevc);width:1.9rem;height:1.9rem}
+.branch-toggle-button[disabled]{opacity:.55}
+.simulation-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding-block:.25rem}
+.stat-box{background:none;border:0;border-radius:0;padding:.2rem .1rem;text-align:center}
+.stat-box + .stat-box{border-left:1px solid var(--line)}
+.stat-box-label{text-transform:none;letter-spacing:0;font:500 .75rem "Inter",sans-serif;color:var(--muted)}
+.stat-box .simulation-text-4,.stat-box .simulation-text-5,.stat-box .stat-value{font:700 1.5rem "Space Grotesk",sans-serif}
+.simulation-row-5{grid-template-columns:repeat(5,max-content);overflow-x:auto;gap:.5rem;padding-bottom:.4rem;scrollbar-width:none}
+.simulation-row-5::-webkit-scrollbar{display:none}
+.simulation-row-5 .filter-tag,.simulation-row-5 .simulation-button-2{white-space:nowrap;border-radius:.6rem;padding:.55rem .85rem;font-size:.75rem}
+.simulation-row-5 [aria-pressed="true"]{background:var(--cyan);color:#04101f;border-color:var(--cyan);box-shadow:none}
+.simulation-row-5 .vx-filter-status{position:sticky;left:0;width:calc(100vw - 5.5rem);grid-column:1/-1}
+.simulation-row-10 .scrubber-button{background:var(--surface);border:1px solid var(--line);border-radius:.7rem}
+.simulation-row-10 .simulation-button-3{background:rgba(56,189,248,.14);border:1px solid var(--cyan);color:var(--cyan);border-radius:.7rem}
+.milestone-card-title{white-space:normal;overflow:visible;text-overflow:clip}
+.milestone-card{border-radius:.875rem}
+
+/* 5. Investors ----------------------------------------------------------- */
+.investor-label{display:inline-block;justify-self:start;border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;background:rgba(56,189,248,.05)}
+.investor-stat{justify-items:start;text-align:left;padding:.85rem 1rem;gap:.15rem}
+.investor-stat-label{order:-1;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:var(--cyan)}
+.investor-stat-value{font:700 1.7rem/1.1 "Space Grotesk",sans-serif}
+.vx-person{--bg-tint:color-mix(in srgb,var(--accent) 12%,var(--panel));background:linear-gradient(170deg,var(--bg-tint),var(--surface));border-color:color-mix(in srgb,var(--accent) 45%,transparent);padding:1.1rem}
+.vx-person-name{color:var(--accent);font-size:1.05rem}
+.vx-person-list li{font-size:.86rem;line-height:1.45}
+.investor-link-button{--i:var(--i-eye)}
+.investor-button{--i:var(--i-lock)}
+.investor-actions .investor-link-button,.investor-actions .investor-button{grid-auto-flow:column;justify-content:center;gap:.5rem}
+.investor-link-button::before,.investor-button::before{flex:none;width:1rem;height:1rem}
+
+@media(max-width:340px){.vx-panels{grid-template-columns:minmax(0,1fr)}.stat-box-label{font-size:.7rem}}
+
+.vx-cta{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.vx-cta .hero-button,.vx-cta .vx-secondary{font-size:.85rem;padding-inline:.6rem;text-wrap:balance}
+
+/* 6. Team cards: compact grid ---------------------------------------------
+   Columns follow the width of the team box (not the screen), so the layout
+   holds wherever the box sits.
+     under 360px : one column
+     360px and up: two columns; an odd last card spans the full row
+     480px and up: roomier type; the spanning card becomes profile | list
+   Where supported, subgrid keeps the header, divider and bullets of cards in
+   the same row on one line, so everything lines up across the grid.        */
+.investor-box-3:has(> .vx-team){container-name:team;container-type:inline-size}
+
+.vx-team{
+  --t-gap:.75rem;--t-pad:.9rem;--t-av:2.5rem;
+  --t-name:.95rem;--t-role:.78rem;--t-li:.78rem;--t-badge:.6rem;
+  display:grid;grid-template-columns:minmax(0,1fr);gap:var(--t-gap);align-items:stretch
+}
+.vx-team .vx-person{padding:var(--t-pad);gap:.7rem;border-radius:.8rem;min-width:0}
+
+/* header: avatar left, badge right, then name and role underneath */
+.vx-team .vx-person-top{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"av bd" "id id";gap:.55rem .5rem;align-items:center;align-content:start}
+.vx-team .vx-avatar{grid-area:av;width:var(--t-av);height:var(--t-av)}
+.vx-team .vx-person-top .vx-badge{grid-area:bd;justify-self:end;font-size:var(--t-badge);letter-spacing:.03em;line-height:1.3;padding:.2rem .55rem}
+.vx-team .vx-person-id{grid-area:id}
+.vx-team .vx-person-name{font-size:var(--t-name);line-height:1.2;text-wrap:balance}
+.vx-team .vx-person-role{font-size:var(--t-role);line-height:1.35;margin:.2rem 0 0;text-wrap:balance}
+
+/* bullets */
+.vx-team .vx-person-list{gap:.5rem;padding:.8rem 0 0}
+.vx-team .vx-person-list li{font-size:var(--t-li);line-height:1.4;padding-left:.95rem}
+.vx-team .vx-person-list li::before{width:.3rem;height:.3rem;top:.5em}
+
+/* links */
+.vx-team .vx-socials{grid-template-columns:repeat(auto-fit,minmax(min(100%,6.5rem),1fr));gap:.5rem;min-height:0}
+.vx-team .vx-social{min-width:0;min-height:2.5rem;padding:.35rem .6rem;gap:.4rem;font-size:var(--t-li)}
+.vx-team .vx-social svg{width:1rem;height:1rem}
+.vx-team .vx-social > span:not(.sr-only){min-width:0;overflow-wrap:anywhere}
+
+@container team (min-width:360px){
+  .vx-team{
+    --t-pad:.75rem;--t-av:2.3rem;
+    --t-name:.86rem;--t-role:.7rem;--t-li:.72rem;--t-badge:.54rem;
+    grid-template-columns:repeat(2,minmax(0,1fr));column-gap:.65rem
+  }
+  .vx-team > .vx-person:last-child:nth-child(odd){grid-column:1/-1}
+}
+@container team (min-width:360px) and (max-width:479px){
+  /* narrow two-column cards: icon-only pills (the words stay for screen readers) */
+  .vx-team .vx-socials{grid-template-columns:repeat(auto-fit,minmax(min(100%,2.75rem),1fr))}
+  .vx-team .vx-social{padding:.35rem .4rem}
+  .vx-team .vx-social svg{width:1.1rem;height:1.1rem}
+  .vx-team .vx-social > span:not(.sr-only){position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  /* the full-width card has room for the words */
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-socials{grid-template-columns:repeat(auto-fit,minmax(min(100%,6.5rem),1fr))}
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-social{padding:.35rem .6rem}
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-social svg{width:1rem;height:1rem}
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-social > span:not(.sr-only){position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}
+}
+@container team (min-width:480px){
+  .vx-team{
+    --t-pad:.9rem;--t-av:2.5rem;
+    --t-name:.95rem;--t-role:.78rem;--t-li:.78rem;--t-badge:.6rem;
+    column-gap:.85rem
+  }
+  .vx-team .vx-socials{grid-template-columns:repeat(auto-fit,minmax(min(100%,5.25rem),1fr))}
+  .vx-team .vx-social{font-size:.74rem;padding:.4rem .5rem;gap:.35rem}
+  .vx-team .vx-social svg{width:.95rem;height:.95rem}
+  /* the spanning card: profile on the left, bullets on the right */
+  .vx-team > .vx-person:last-child:nth-child(odd){grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-rows:auto auto;column-gap:1.25rem;align-content:center;align-items:center}
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-person-top{grid-column:1;grid-row:1}
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-person-top .vx-badge{justify-self:start;margin-left:.25rem}
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-socials{grid-column:1;grid-row:2}
+  .vx-team > .vx-person:last-child:nth-child(odd) .vx-person-list{grid-column:2;grid-row:1/3;padding:0 0 0 1.1rem;border-top:0;border-left:1px solid var(--line)}
+}
+
+@supports (grid-template-rows:subgrid){
+  @container team (min-width:360px){
+    .vx-team{row-gap:0;margin-bottom:calc(var(--t-gap) * -1)}
+    .vx-team .vx-person{grid-row:span 3;grid-template-rows:subgrid;row-gap:0;margin-bottom:var(--t-gap)}
+    .vx-team .vx-person-top{padding-bottom:.7rem}
+    .vx-team .vx-person-list{padding-top:.7rem}
+    .vx-team .vx-socials{margin-top:.7rem}
+  }
+  @container team (min-width:480px){
+    .vx-team > .vx-person:last-child:nth-child(odd){grid-row:auto;grid-template-rows:auto auto}
+    .vx-team > .vx-person:last-child:nth-child(odd) .vx-person-top{padding-bottom:0}
+    .vx-team > .vx-person:last-child:nth-child(odd) .vx-person-list{padding-top:0}
+    .vx-team > .vx-person:last-child:nth-child(odd) .vx-socials{margin-top:.7rem}
+  }
+}
+
+/* 7. Buttons on one line, header: smaller logo ------------------------------
+   Extra words (.vx-extra) only show where there is room for them (768px+).
+   Each button keeps its label on one line, with the icon and the label
+   centred together as one group, so the row lines up.                       */
+.vx-extra{display:none}
+
+.vx-hero .vx-cta{display:grid;grid-template-columns:auto auto;justify-content:stretch;justify-items:stretch;align-items:stretch;gap:.6rem}
+.vx-hero .vx-cta .hero-button,.vx-hero .vx-cta .vx-secondary,
+.investor-actions .investor-link-button,.investor-actions .investor-button{
+  display:inline-grid;grid-auto-flow:column;grid-auto-columns:max-content;justify-content:center;align-items:center;column-gap:.5rem;
+  box-sizing:border-box;width:100%;max-width:none;min-width:0;height:3.25rem;min-height:3.25rem;padding:0 .8rem;
+  font-size:clamp(.78rem,3.6vw,.9rem);font-weight:700;line-height:1;letter-spacing:.01em;text-align:center;white-space:nowrap;text-wrap:nowrap;justify-self:stretch}
+.vx-hero .vx-cta .vx-secondary,.investor-actions .investor-link-button{font-weight:600}
+.vx-hero .vx-cta .hero-button::before,.vx-hero .vx-cta .vx-secondary::before,
+.investor-actions .investor-link-button::before,.investor-actions .investor-button::before{flex:none;width:1.05rem;height:1.05rem}
+.investor-actions .investor-link-button,.investor-actions .investor-button{font-family:var(--font-body);font-weight:700;font-size:clamp(.74rem,2.9vw,.84rem);letter-spacing:.05em}
+
+.investor-actions{grid-template-columns:minmax(0,1fr);gap:.6rem;align-items:stretch}
+@media(min-width:480px){.investor-actions{grid-template-columns:auto auto;justify-content:stretch}}
+
+.vx-board-cta .hero-button{white-space:nowrap;text-wrap:nowrap;font-size:clamp(.74rem,3.5vw,.88rem);padding-inline:.75rem}
+
+.simulation-row-10 .scrubber-button,.simulation-row-10 .simulation-button-3{height:2.75rem;min-height:2.75rem;align-self:stretch;min-width:0;justify-content:center;text-align:center;white-space:nowrap;padding-inline:.3rem;font-size:clamp(.7rem,3.3vw,.82rem)}
+
+@media(max-width:340px){.simulation-row-10 .scrubber-button,.simulation-row-10 .simulation-button-3{font-size:.62rem;letter-spacing:-.02em;padding-inline:.1rem}}
+
+.vx-logo{font-size:18px;letter-spacing:.03em}
+.header-header .header-row{min-height:3.5rem;padding-block:.25rem}
+
+
+/* 8. Section openers --------------------------------------------------------
+   Each new section starts with more empty space, a glowing divider line, a
+   soft light wash falling from the top, and a small numbered marker (02, 03 ...)
+   sitting on the line, so it is clear when a new section begins.
+   The hero is section 01; the footer gets the line but no number.             */
+main{counter-reset:sec 1}
+main > section:not(.hero-section),footer{position:relative}
+main > section:not(.hero-section){counter-increment:sec;padding-top:6.5rem}
+main > section.vx-how,main > section.vx-board{padding-top:0}
+.vx-how .vx-wrap,.vx-board .vx-wrap{padding-top:6.5rem}
+footer{padding-top:4rem}
+
+main > section:not(.hero-section)::before,footer::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:9rem;pointer-events:none;
+  border-top:1px solid transparent;border-image:linear-gradient(90deg,transparent,rgba(56,189,248,.65) 50%,transparent) 1;
+  background:radial-gradient(55% 100% at 50% 0,rgba(56,189,248,.16),transparent 75%)}
+main > section:not(.hero-section)::after{
+  content:counter(sec,decimal-leading-zero);content:counter(sec,decimal-leading-zero) / "";
+  position:absolute;top:0;left:50%;transform:translate(-50%,-50%);z-index:2;padding:.3rem .8rem .3rem 1rem;
+  border:1px solid rgba(56,189,248,.6);border-radius:999px;background:var(--bg);color:var(--cyan);
+  font:600 .72rem "JetBrains Mono",monospace;letter-spacing:.22em;line-height:1;
+  box-shadow:0 0 0 6px rgba(4,11,25,.95),0 0 22px rgba(56,189,248,.35)}
