@@ -1,0 +1,16 @@
+
+/* ===== Hand-written light-mode touches (SVG artwork and special cases) ===== */
+
+/* Desktop pill nav keeps its outlined button (the generated rule would turn its text white) */
+@media (min-width:1280px){html[data-theme="light"] .header-link-2{color:var(--text)}}
+/* The code snippet card is a translucent black panel in night mode; make it a soft light panel */
+html[data-theme="light"] .pillars-card-2{background:rgba(11,20,38,.05)}
+
+/* Hero preview artwork: SVG colours are attributes in the HTML, so adjust them here */
+html[data-theme="light"] .vx-preview svg text{fill:#4b5d78}
+html[data-theme="light"] .vx-preview svg text[fill="#F4B65F"]{fill:#a34a05}
+html[data-theme="light"] .vx-preview svg circle[r="9"]{fill:#ffffff}
+
+/* Contact form: a softer dimming layer and a solid white card in light mode */
+html[data-theme="light"] .contact-modal{background:rgba(20,36,66,.5)}
+html[data-theme="light"] .modal-card{background:#ffffff}
